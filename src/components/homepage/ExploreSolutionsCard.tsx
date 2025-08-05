@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaThumbsUp } from "react-icons/fa";
 
 export interface IExploreSolutionsCard {
   index: number;
@@ -17,21 +17,27 @@ const ExploreSolutionsCard: React.FC<IExploreSolutionsCard> = ({
   imageUrl,
 }) => {
   return (
-    <div>
+    <div className="bg-white flex flex-col items-start gap-6 rounded-lg p-6 hover:bg-[#f0f3f9]/20 duration-500 ease-linear shadow-box-shadow">
       <Image
         src={imageUrl}
         alt={title}
         width={300}
         height={200}
-        className="rounded-lg mb-4"
+        objectFit="cover"
+        className="h-[200px] w-full rounded-lg"
       />
-      <h2 className="text-2xl font-bold text-primary-color-two mb-2">
-        {title}
-      </h2>
-      <p className="text-text-color-dark mb-4">{description}</p>
+
+      <div className="w-full flex flex-row items-center justify-between">
+        <div className="w-16 h-16 bg-black flex flex-col justify-center items-center rounded-lg shadow-lg nt-10">
+          <FaThumbsUp size={30} color="#fff" />
+        </div>
+        <FaThumbsUp size={30} color="#fafafa" />
+      </div>
+      <h2 className="text-2xl font-bold text-primary-color-two">{title}</h2>
+      <p className="text-text-color-dark text-lg">{description}</p>
       <a
         href={link}
-        className="bg-primary-color-two text-white px-4 py-2 rounded-full hover:bg-primary-color-three transition duration-300"
+        className=" text-lg text-black rounded-full hover:bg-primary-color-three transition duration-300"
       >
         Readmore <FaArrowRight className="inline ml-2" />
       </a>
