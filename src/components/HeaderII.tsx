@@ -9,13 +9,12 @@ import logo from "../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "@/utils/navLinks";
 import { CgMenuGridR } from "react-icons/cg";
-import TopHeader from "./TopHeader";
 
-const HeaderII = ({ fromHome }: { fromHome?: boolean }) => {
+const HeaderII = ({}) => {
   const location = usePathname();
 
   const [pathname, setPathname] = useState<string>("");
-  const [locationHash, setLocationHash] = useState("");
+
   const [toggleMenu, setToggleMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(Dimensions.WindowWidth);
 
@@ -45,7 +44,6 @@ const HeaderII = ({ fromHome }: { fromHome?: boolean }) => {
 
   useEffect(() => {
     setPathname(location);
-    setLocationHash(window.location.hash);
   }, [location]);
 
   return (

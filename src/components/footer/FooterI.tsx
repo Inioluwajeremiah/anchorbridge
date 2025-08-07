@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BsArrowRight, BsArrowRightCircleFill } from "react-icons/bs";
@@ -35,7 +36,9 @@ const FooterI = () => {
             key={index}
             className="group relative block w-20 h-20 rounded-lg overflow-hidden"
           >
-            <img
+            <Image
+              width={80}
+              height={80}
               src={url}
               alt={`Image ${index + 1}`}
               className="w-20 h-20 rounded-lg transition-transform duration-300 group-hover:scale-105"

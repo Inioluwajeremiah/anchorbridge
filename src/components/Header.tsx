@@ -4,12 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import HamburgerMenuIcon from "@/icons/MenuIcon";
 import { Dimensions } from "@/utils/Dimension";
-import {
-  BiEnvelope,
-  BiLocationPlus,
-  BiPhoneCall,
-  BiSearch,
-} from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import logo from "../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "@/utils/navLinks";
@@ -20,7 +15,6 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
   const location = usePathname();
 
   const [pathname, setPathname] = useState<string>("");
-  const [locationHash, setLocationHash] = useState("");
   const [toggleMenu, setToggleMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(Dimensions.WindowWidth);
 
@@ -50,7 +44,6 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
 
   useEffect(() => {
     setPathname(location);
-    setLocationHash(window.location.hash);
   }, [location]);
 
   return (

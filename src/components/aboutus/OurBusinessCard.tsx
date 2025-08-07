@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaArrowRight, FaThumbsUp } from "react-icons/fa";
+import { FaThumbsUp } from "react-icons/fa";
 
 export interface IOurBusinessCard {
   index: number;

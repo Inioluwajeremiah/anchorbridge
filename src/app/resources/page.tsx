@@ -111,7 +111,7 @@ const resourcesData: IResourcesCard[] = [
   },
 ];
 
-const page = () => {
+const Resources = () => {
   const dataPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1); // 1-based for display
   const [currentData, setCurrentData] = useState<IResourcesCard[]>([]);
@@ -222,4 +222,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Resources;

@@ -7,7 +7,6 @@ import { Dimensions } from "@/utils/Dimension";
 import { RiCloseCircleFill } from "react-icons/ri";
 
 const WindowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
-const WindowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
 
 console.log("Window Width:", WindowWidth);
 

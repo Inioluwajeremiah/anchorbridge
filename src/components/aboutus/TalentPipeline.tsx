@@ -1,10 +1,9 @@
 "use client";
+
 import { Dimensions } from "@/utils/Dimension";
 import Image from "next/image";
 import React, { useState } from "react";
-import bg from "../../../public/our_business_bg.png";
 import { PiPhone } from "react-icons/pi";
-import { url } from "inspector";
 
 export interface ITalentPipelineData {
   tab: string;
@@ -66,11 +65,18 @@ const TalentPipeline = () => {
       className=" bg-cover py-20 w-full bg-no-repeat relative"
     >
       <div className="container mx-auto relative">
-        <img
+        {/* <img
           alt={currentData.title + " image"}
           src={currentData.backgroundImage}
           //   width={Dimensions.WindowWidth}
           //   height={200}
+          className="rounded-lg w-full h-[72vh]"
+        /> */}
+        <Image
+          alt={currentData.title + " image"}
+          src={currentData.backgroundImage}
+          width={Dimensions.WindowWidth}
+          height={Dimensions.WindowHeight * 0.72}
           className="rounded-lg w-full h-[72vh]"
         />
 

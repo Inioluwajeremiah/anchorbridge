@@ -36,10 +36,10 @@ const FeaturesCard: React.FC<IFeatureCard> = ({
   const [toggleCard, setToggleCard] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleToggleCard = () => {
-    setToggleCard(!toggleCard);
-    setCurrentIndex(index);
-  };
+  // const handleToggleCard = () => {
+  //   setToggleCard(!toggleCard);
+  //   setCurrentIndex(index);
+  // };
 
   const handleMouseEnter = (i: number) => {
     setToggleCard(true);

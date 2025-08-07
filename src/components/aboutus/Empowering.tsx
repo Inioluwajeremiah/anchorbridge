@@ -5,8 +5,6 @@ import React, { useState } from "react";
 import usaIcon from "../../../public/usaicon.webp";
 import bulbIcon from "../../../public/bulb.png";
 import peopleIcon from "../../../public/people.png";
-import { url } from "inspector";
-import { Play } from "next/font/google";
 import { BsPlayCircle } from "react-icons/bs";
 import { Dimensions } from "@/utils/Dimension";
 import { RiCloseCircleFill } from "react-icons/ri";
