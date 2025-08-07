@@ -4,8 +4,11 @@ import { Dimensions } from "@/utils/Dimension";
 import Image from "next/image";
 import React, { useState } from "react";
 import { BsPlayCircle } from "react-icons/bs";
+import { CgClose } from "react-icons/cg";
+import { IoCloseCircleOutline } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { PiPhoneCall } from "react-icons/pi";
+import { RiCloseCircleFill, RiCloseFill } from "react-icons/ri";
 import ReactPlayer from "react-player";
 
 const companyImages: { url: string; title: string }[] = [
@@ -125,12 +128,24 @@ const ExtensiveExperience = () => {
         //   width="100%"
         //   height="100%"
         // />
-        <iframe
-          className="fixed top-0 left-0 z-50 h-screen w-screen bg-white/50"
-          width={Dimensions.WindowWidth}
-          height={Dimensions.WindowHeight - 80}
-          src="https://www.youtube.com/embed/MDmKwsFGZT8"
-        ></iframe>
+        <div className="fixed top-0 left-0 z-50 h-screen w-screen bg-white/50">
+          {/* close button */}
+          <button
+            onClick={() => setShowIframe(false)}
+            className=" absolute top-3 right-44 ml-auto  flex  flex-col justify-start items-center cursor-pointer"
+          >
+            <div className=" rounded-full flex flex-col justify-center items-center">
+              <RiCloseCircleFill size={24} color="#fff" />
+            </div>
+            <p className="text-white text-lg mt-[2px] font-normal">Close</p>
+          </button>
+          <iframe
+            className="h-full w-full"
+            width={Dimensions.WindowWidth}
+            height={Dimensions.WindowHeight - 80}
+            src="https://www.youtube.com/embed/MDmKwsFGZT8"
+          ></iframe>
+        </div>
       )}
       {/* 
       <iframe

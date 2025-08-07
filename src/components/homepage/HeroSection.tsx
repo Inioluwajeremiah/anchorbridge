@@ -34,9 +34,9 @@ const FeaturesData = [
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-[url(https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/ABC-BG1-scaled.png)] bg-cover w-full pb-44 ">
+      <div className="bg-[url(https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/ABC-BG1-scaled.png)] bg-cover w-full pt-4 pb-44 ">
         <div className="min-h-screen min-w-screen flex flex-col justify-end items-start  ">
-          <Header />
+          <Header fromHome={true} />
           <div className="container mx-auto mt-5 flex flex-col">
             <h1 className=" text-white text-8xl font-[800] leading-[90px] ">
               It's Time, Create

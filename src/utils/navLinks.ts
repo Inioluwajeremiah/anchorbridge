@@ -13,7 +13,7 @@ export const navLinks = [
   },
   {
     label: "About Us",
-    href: "/#aboutUs",
+    href: "/about-us",
     matchHash: "#aboutUs",
     isPrimary: false,
   },

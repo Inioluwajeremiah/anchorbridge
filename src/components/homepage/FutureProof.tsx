@@ -6,6 +6,9 @@ import futureproof2 from "../../../public/futureproof2.jpg";
 import { log } from "console";
 import { Play } from "next/font/google";
 import { BsPlayCircle } from "react-icons/bs";
+import { useState } from "react";
+import { Dimensions } from "@/utils/Dimension";
+import { RiCloseCircleFill } from "react-icons/ri";
 
 const WindowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
 const WindowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
@@ -13,6 +16,7 @@ const WindowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
 console.log("Window Width:", WindowWidth);
 
 const FutureProof = () => {
+  const [showIframe, setShowIframe] = useState(false);
   return (
     <div className="container mx-auto flex flex-row items-start justify-between gap-x-10 h-screen pt-24 ">
       <div className="w-1/2">
@@ -79,12 +83,12 @@ const FutureProof = () => {
             height={350}
             //   objectFit="contain"
           />
-          <a
-            href="https://www.youtube.com/watch?v=crqcHvV_qq0"
+          <button
+            onClick={() => setShowIframe(true)}
             className="bg-black h-20 w-[70px] rounded-br-2xl absolute bottom-0 right-0 flex flex-col justify-center items-center"
           >
             <BsPlayCircle color="white" size={20} />
-          </a>
+          </button>
         </div>
 
         <Image
@@ -96,6 +100,27 @@ const FutureProof = () => {
           //   objectFit="contain"
         />
       </div>
+
+      {showIframe && (
+        <div className="fixed top-0 left-0 z-50 h-screen w-screen bg-white/50">
+          {/* close button */}
+          <button
+            onClick={() => setShowIframe(false)}
+            className=" absolute top-3 right-44 ml-auto  flex  flex-col justify-start items-center cursor-pointer"
+          >
+            <div className=" rounded-full flex flex-col justify-center items-center">
+              <RiCloseCircleFill size={24} color="#fff" />
+            </div>
+            <p className="text-white text-lg mt-[2px] font-normal">Close</p>
+          </button>
+          <iframe
+            className="h-full w-full"
+            width={Dimensions.WindowWidth}
+            height={Dimensions.WindowHeight - 80}
+            src="https://www.youtube.com/watch?v=crqcHvV_qq0"
+          ></iframe>
+        </div>
+      )}
     </div>
   );
 };

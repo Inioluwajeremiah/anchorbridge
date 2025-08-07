@@ -14,8 +14,9 @@ import logo from "../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "@/utils/navLinks";
 import { CgMenuGridR } from "react-icons/cg";
+import TopHeader from "./TopHeader";
 
-const Header = () => {
+const Header = ({ fromHome }: { fromHome: boolean }) => {
   const location = usePathname();
 
   const [pathname, setPathname] = useState<string>("");
@@ -53,126 +54,96 @@ const Header = () => {
   }, [location]);
 
   return (
-    <header className="absolute w-full top-4 h-36 bg-bg-color z-50">
+    <header
+      className=" w-full h-36 z-50"
+      style={{
+        top: fromHome ? 20 : 0,
+        position: fromHome ? "absolute" : "relative",
+      }}
+    >
       {/* top header */}
-      <div className="bg-black lg:container lg:w-full mx-auto h-16 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-3 py-3 text-[15px] md:text-sm px-5 rounded-t-lg  ">
-        <div className="flex flex-row gap-8">
-          {/* location */}
-          <div className="hidden lg:flex flex-row items-center gap-4">
-            <div className="flex flex-row items-center gap-2">
-              <BiLocationPlus
-                size={Dimensions.iconSize / 2}
-                className="text-[#aaafb8]"
-              />
-              <p className="text-white">Location</p>
-            </div>
-            <p className="text-[#aaafb8]">
-              Fort Lauderdale, FL, USA
-              <span className="border-l border-l-[#aaafb8] pl-2 ml-2">
-                Lagos, Nigeria
-              </span>
-            </p>
-          </div>
-          {/* email */}
-          <div className="flex flex-row items-center gap-4  ">
-            <div className="flex flex-row items-center gap-2">
-              <BiEnvelope
-                size={Dimensions.iconSize / 2}
-                className="text-[#aaafb8]"
-              />
-              <p className="text-white hidden lg:block">Email</p>
-            </div>
-            <p className="text-[#aaafb8]">info@anchorbridgeconsulting.com</p>
-          </div>
-        </div>
-        {/* phone */}
-        <div className="flex flex-row items-center gap-4">
-          <div className="flex flex-row items-center gap-2">
-            <BiPhoneCall
-              size={Dimensions.iconSize / 2}
-              className="text-[#aaafb8]"
-            />
-            <p className="text-white hidden lg:block">Phone</p>
-          </div>
-          <p className="text-[#aaafb8]">+1 954-751-5611</p>
-        </div>
-      </div>
-
+      <TopHeader fromHome={fromHome} />
       {/* main header */}
-      <div className="bg-white lg:container lg:w-full mx-auto h-20 flex flex-row items-center justify-between px-5 rounded-b-lg">
-        <div className="w-[20%]">
-          {/* logo */}
-          <Link href={"/"}>
-            <Image
-              src={logo}
-              alt="Learn Chain Logo"
-              className=" object-contain"
-            />
-          </Link>
-        </div>
+      <div className={`${!fromHome && "w-full bg-white"}`}>
+        <div
+          className={`bg-white lg:container lg:w-full mx-auto h-20 flex flex-row items-center justify-between px-5 rounded-b-lg`}
+        >
+          <div className="w-[20%]">
+            {/* logo */}
+            <Link href={"/"}>
+              <Image
+                src={logo}
+                alt="Learn Chain Logo"
+                className=" object-contain"
+              />
+            </Link>
+          </div>
 
-        <div className="flex flex-row items-center">
-          {/* menu items */}
-          <nav
-            className={`text-sm md:text-xl lg:text-2xl fixed z-20 lg:relative lg:h-fit lg:flex lg:flex-row lg:items-center overflow-hidden 
+          <div className="flex flex-row items-center">
+            {/* menu items */}
+            <nav
+              className={`text-sm md:text-xl lg:text-2xl fixed z-20 lg:relative lg:h-fit lg:flex lg:flex-row lg:items-center overflow-hidden 
             ${
               toggleMenu
                 ? ` top-20 w-full flex flex-col items-center justify-center left-0 bg-bg-color transition ease-in-out duration-[700ms]`
                 : "-left-[1500px] lg:left-5 "
             }
             `}
-            style={{ height: toggleMenu ? navHeight : "" }}
-          >
-            {navLinks.map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                onClick={handleToggleMenu}
-                className={`p-4 text-lg font-bold rounded-md ${
-                  toggleMenu ? "translate-x-4 ease-linear duration-[700ms]" : ""
-                }`}
-                style={{
-                  color: pathname === item.href ? "#078586" : "",
-                  marginRight: 10,
-                  marginBottom: toggleMenu ? 40 : "",
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        <div>
-          {/* search and menu button */}
-
-          <div className="flex flex-row items-center gap-x-4 ">
-            <button className="h-9 w-9 cursor-pointer">
-              <BiSearch />
-            </button>
-
-            {/* crm button */}
-
-            {location === "/services" && (
-              <button className="bg-black hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 text-sm font-bold cursor-pointer duration-500">
-                CRM Services
-              </button>
-            )}
-            {/* drop down */}
-            <button className="w-[54px] h-[54px] rounded-full border border-gray-300 flex justify-center items-center cursor-pointer">
-              <div className="bg-black h-9 w-9 transition-all duration-300 ease-out hover:scale-[1.5] rounded-full p-2 flex justify-center items-center">
-                <CgMenuGridR color="#fff" size={20} className="" />
-              </div>
-            </button>
+              style={{ height: toggleMenu ? navHeight : "" }}
+            >
+              {navLinks.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  onClick={handleToggleMenu}
+                  className={`p-4 text-lg font-bold rounded-md ${
+                    toggleMenu
+                      ? "translate-x-4 ease-linear duration-[700ms]"
+                      : ""
+                  }`}
+                  style={{
+                    color: pathname === item.href ? "#078586" : "",
+                    marginRight: 10,
+                    marginBottom: toggleMenu ? 40 : "",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
-          {/* menu icon */}
-          <button
-            className="lg:hidden"
-            onClick={() => setToggleMenu(!toggleMenu)}
-          >
-            <HamburgerMenuIcon color="#000" />
-          </button>
+          <div>
+            {/* search and menu button */}
+
+            <div className="flex flex-row items-center gap-x-4 ">
+              <button className="h-9 w-9 cursor-pointer">
+                <BiSearch />
+              </button>
+
+              {/* crm button */}
+
+              {location !== "/" && (
+                <button className="bg-black hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 text-sm font-bold cursor-pointer duration-500">
+                  CRM Services
+                </button>
+              )}
+              {/* drop down */}
+              <button className="w-[54px] h-[54px] rounded-full border border-gray-300 flex justify-center items-center cursor-pointer">
+                <div className="bg-black h-9 w-9 transition-all duration-300 ease-out hover:scale-[1.5] rounded-full p-2 flex justify-center items-center">
+                  <CgMenuGridR color="#fff" size={20} className="" />
+                </div>
+              </button>
+            </div>
+
+            {/* menu icon */}
+            <button
+              className="lg:hidden"
+              onClick={() => setToggleMenu(!toggleMenu)}
+            >
+              <HamburgerMenuIcon color="#000" />
+            </button>
+          </div>
         </div>
       </div>
     </header>

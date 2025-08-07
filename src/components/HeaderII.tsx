@@ -4,18 +4,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import HamburgerMenuIcon from "@/icons/MenuIcon";
 import { Dimensions } from "@/utils/Dimension";
-import {
-  BiEnvelope,
-  BiLocationPlus,
-  BiPhoneCall,
-  BiSearch,
-} from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import logo from "../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "@/utils/navLinks";
 import { CgMenuGridR } from "react-icons/cg";
+import TopHeader from "./TopHeader";
 
-const HeaderII = () => {
+const HeaderII = ({ fromHome }: { fromHome?: boolean }) => {
   const location = usePathname();
 
   const [pathname, setPathname] = useState<string>("");
@@ -53,58 +49,17 @@ const HeaderII = () => {
   }, [location]);
 
   return (
-    <header className="fixed w-full top-0 h-20 bg-bg-color z-50">
-      {/* top header */}
-      <div className="bg-black ">
-        <div className=" lg:container lg:w-full mx-auto h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-3 py-3 text-[15px] md:text-sm px-[5%] ">
-          <div className="flex flex-row gap-8">
-            {/* location */}
-            <div className="hidden lg:flex flex-row items-center gap-4">
-              <div className="flex flex-row items-center gap-2">
-                <BiLocationPlus
-                  size={Dimensions.iconSize / 2}
-                  className="text-[#aaafb8]"
-                />
-                <p className="text-white">Location</p>
-              </div>
-              <p className="text-[#aaafb8]">
-                Fort Lauderdale, FL, USA
-                <span className="border-l border-l-[#aaafb8] pl-2 ml-2">
-                  Lagos, Nigeria
-                </span>
-              </p>
-            </div>
-            {/* email */}
-            <div className="flex flex-row items-center gap-4  ">
-              <div className="flex flex-row items-center gap-2">
-                <BiEnvelope
-                  size={Dimensions.iconSize / 2}
-                  className="text-[#aaafb8]"
-                />
-                <p className="text-white hidden lg:block">Email</p>
-              </div>
-              <p className="text-[#aaafb8]">info@anchorbridgeconsulting.com</p>
-            </div>
-          </div>
-          {/* phone */}
-          <div className="flex flex-row items-center gap-4">
-            <div className="flex flex-row items-center gap-2">
-              <BiPhoneCall
-                size={Dimensions.iconSize / 2}
-                className="text-[#aaafb8]"
-              />
-              <p className="text-white hidden lg:block">Phone</p>
-            </div>
-            <p className="text-[#aaafb8]">+1 954-751-5611</p>
-          </div>
-        </div>
-      </div>
+    <header className="bg-white w-full h-20 bg-bg-color z-50">
       {/* main header */}
-      <div className="lg:container lg:w-full mx-auto h-full flex flex-row items-center justify-between px-[5%] ">
+      <div className=" lg:container lg:w-full mx-auto h-20 flex flex-row items-center justify-between px-5">
         <div className="w-[20%]">
           {/* logo */}
           <Link href={"/"}>
-            <Image src={logo} alt="Learn Chain Logo" className="" />
+            <Image
+              src={logo}
+              alt="Learn Chain Logo"
+              className=" object-contain"
+            />
           </Link>
         </div>
 
@@ -125,11 +80,11 @@ const HeaderII = () => {
                 key={index}
                 href={item.href}
                 onClick={handleToggleMenu}
-                className={`p-4 text-sm font-bold rounded-md ${
+                className={`p-4 text-lg font-bold rounded-md ${
                   toggleMenu ? "translate-x-4 ease-linear duration-[700ms]" : ""
                 }`}
                 style={{
-                  color: pathname === item.href ? "#078586" : "",
+                  color: pathname === item.href ? "#078586" : "#000",
                   marginRight: 10,
                   marginBottom: toggleMenu ? 40 : "",
                 }}
@@ -150,11 +105,11 @@ const HeaderII = () => {
 
             {/* crm button */}
 
-            {location === "/services" && (
+            {/* {location === "/services" && (
               <button className="bg-black hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 text-sm font-bold cursor-pointer duration-500">
                 CRM Services
               </button>
-            )}
+            )} */}
             {/* drop down */}
             <button className="w-[54px] h-[54px] rounded-full border border-gray-300 flex justify-center items-center cursor-pointer">
               <div className="bg-black h-9 w-9 transition-all duration-300 ease-out hover:scale-[1.5] rounded-full p-2 flex justify-center items-center">
