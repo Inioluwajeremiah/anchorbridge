@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import HamburgerMenuIcon from "@/icons/MenuIcon";
 import { BiSearch } from "react-icons/bi";
-import logo from "../../public/logo.png";
+// import logo from "../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "@/utils/navLinks";
 import { CgMenuGridR } from "react-icons/cg";
@@ -67,7 +67,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
             {/* logo */}
             <Link href={"/"}>
               <Image
-                src={logo}
+                src={"/logo.png"}
                 alt="Learn Chain Logo"
                 className=" object-contain"
               />
