@@ -32,6 +32,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Favicon and Apple Touch Icons */}
+        <link
+          rel="icon"
+          href="https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/cropped-ACB-Logo-scaled-1-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          href="https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/cropped-ACB-Logo-scaled-1-192x192.png"
+          sizes="192x192"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/cropped-ACB-Logo-scaled-1-180x180.png"
+        />
+      </head>
+
       <body
         className={` min-h-screen flex flex-col ${leagueSpartan.variable} ${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
