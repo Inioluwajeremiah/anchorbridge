@@ -1,24 +1,27 @@
+// src/app/resources/[resource]/page.tsx
 import PageHeader from "@/components/PageHeader";
 import { Metadata } from "next";
 
-type Props = {
+type PageProps = {
   params: {
     resource: string;
   };
 };
 
-export async function generateStaticParams() {
-  const slugs = ["resource-1", "resource-2"];
-  return slugs.map((slug) => ({ resource: slug }));
+export function generateStaticParams() {
+  const slugs = ["resource-1", "resource-2"]; // replace with your actual slugs or fetch from API
+  return slugs.map((slug) => ({
+    resource: slug,
+  }));
 }
 
-export const dynamicParams = false; // optional
+export const dynamicParams = false; // optional — use only if all params are known at build time
 
 export const metadata: Metadata = {
   title: "Resource Details",
 };
 
-export default function ResourceDetails({ params }: Props) {
+export default function ResourceDetails({ params }: PageProps) {
   const { resource } = params;
 
   return (
@@ -30,7 +33,7 @@ export default function ResourceDetails({ params }: Props) {
           { title: "Resources", url: "/resources" },
         ]}
       />
-      <p>{resource}</p>
+      <p>Resource: {resource}</p>
     </div>
   );
 }
