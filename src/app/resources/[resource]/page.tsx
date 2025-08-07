@@ -1,23 +1,26 @@
 import PageHeader from "@/components/PageHeader";
 import { Metadata } from "next";
 
+type Props = {
+  params: {
+    resource: string;
+  };
+};
+
 export async function generateStaticParams() {
   const slugs = ["resource-1", "resource-2"];
-
   return slugs.map((slug) => ({ resource: slug }));
 }
 
-export const dynamicParams = false;
+export const dynamicParams = false; // optional
 
 export const metadata: Metadata = {
   title: "Resource Details",
 };
 
-export default function ResourceDetails({
-  params,
-}: {
-  params: { resource: string };
-}) {
+export default function ResourceDetails({ params }: Props) {
+  const { resource } = params;
+
   return (
     <div>
       <PageHeader
@@ -27,7 +30,7 @@ export default function ResourceDetails({
           { title: "Resources", url: "/resources" },
         ]}
       />
-      <p>{params.resource}</p>
+      <p>{resource}</p>
     </div>
   );
 }
