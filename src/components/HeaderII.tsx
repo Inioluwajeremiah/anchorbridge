@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import HamburgerMenuIcon from "@/icons/MenuIcon";
 
 import { BiSearch } from "react-icons/bi";
-import logo from "../../public/logo.png";
+// import logo from "../../public/logo.png";
+import Logo from "../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "@/utils/navLinks";
 import { CgMenuGridR } from "react-icons/cg";
@@ -56,7 +57,7 @@ const HeaderII = ({}) => {
           {/* logo */}
           <Link href={"/"}>
             <Image
-              src={logo}
+              src={Logo}
               alt="Learn Chain Logo"
               className=" object-contain"
             />

@@ -67,7 +67,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
             {/* logo */}
             <Link href={"/"}>
               <Image
-                src={"/logo.png"}
+                src="/logo.png"
                 alt="Learn Chain Logo"
                 className=" object-contain"
               />
