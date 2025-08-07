@@ -60,6 +60,8 @@ const HeaderII = ({}) => {
               src={Logo}
               alt="Learn Chain Logo"
               className=" object-contain"
+              width={200}
+              height={70}
             />
           </Link>
         </div>

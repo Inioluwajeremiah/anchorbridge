@@ -18,7 +18,7 @@ const ExploreSolutionsCard: React.FC<IExploreSolutionsCard> = ({
     <div className="bg-white flex flex-col items-start gap-6 rounded-lg p-6 hover:bg-[#f0f3f9]/20 duration-500 ease-linear shadow-box-shadow">
       <Image
         src={imageUrl}
-        alt={title}
+        alt={title + " image"}
         width={300}
         height={200}
         objectFit="cover"

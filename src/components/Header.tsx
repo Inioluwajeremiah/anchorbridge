@@ -70,6 +70,8 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
                 src="/logo.png"
                 alt="Learn Chain Logo"
                 className=" object-contain"
+                width={200}
+                height={70}
               />
             </Link>
           </div>
