@@ -1,10 +1,23 @@
-"use client";
 import PageHeader from "@/components/PageHeader";
-import React, { use } from "react";
+import { Metadata } from "next";
 
-const ResourceDetails = ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = use(params);
+export async function generateStaticParams() {
+  const slugs = ["resource-1", "resource-2"];
 
+  return slugs.map((slug) => ({ resource: slug }));
+}
+
+export const dynamicParams = false;
+
+export const metadata: Metadata = {
+  title: "Resource Details",
+};
+
+export default function ResourceDetails({
+  params,
+}: {
+  params: { resource: string };
+}) {
   return (
     <div>
       <PageHeader
@@ -14,9 +27,7 @@ const ResourceDetails = ({ params }: { params: Promise<{ slug: string }> }) => {
           { title: "Resources", url: "/resources" },
         ]}
       />
-      <p>{slug}</p>
+      <p>{params.resource}</p>
     </div>
   );
-};
-
-export default ResourceDetails;
+}
