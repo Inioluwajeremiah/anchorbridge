@@ -3,22 +3,24 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import HamburgerMenuIcon from "@/icons/MenuIcon";
-import { Dimensions } from "@/utils/Dimension";
+
 import { BiSearch } from "react-icons/bi";
 import logo from "../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "@/utils/navLinks";
 import { CgMenuGridR } from "react-icons/cg";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 const HeaderII = ({}) => {
   const location = usePathname();
+  const { width, height } = useWindowDimensions();
 
   const [pathname, setPathname] = useState<string>("");
 
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(Dimensions.WindowWidth);
+  const [windowWidth, setWindowWidth] = useState(width);
 
-  const navHeight = Dimensions.WindowHeight - 80;
+  const navHeight = height - 80;
 
   const handleToggleMenu = () => {
     setToggleMenu(false);

@@ -1,9 +1,9 @@
 "use client";
 
-import { Dimensions } from "@/utils/Dimension";
 import Image from "next/image";
 import React, { useState } from "react";
 import { PiPhone } from "react-icons/pi";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export interface ITalentPipelineData {
   tab: string;
@@ -59,6 +59,7 @@ const TalentPipeline = () => {
     talentPipelineData[0]
   );
 
+  const { width, height } = useWindowDimensions();
   return (
     <section
       style={{ backgroundImage: 'url("/our_business_bg.png")' }}
@@ -75,8 +76,8 @@ const TalentPipeline = () => {
         <Image
           alt={currentData.title + " image"}
           src={currentData.backgroundImage}
-          width={Dimensions.WindowWidth}
-          height={Dimensions.WindowHeight * 0.72}
+          width={width}
+          height={height * 0.72}
           className="rounded-lg w-full h-[72vh]"
         />
 

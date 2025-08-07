@@ -6,8 +6,8 @@ import usaIcon from "../../../public/usaicon.webp";
 import bulbIcon from "../../../public/bulb.png";
 import peopleIcon from "../../../public/people.png";
 import { BsPlayCircle } from "react-icons/bs";
-import { Dimensions } from "@/utils/Dimension";
 import { RiCloseCircleFill } from "react-icons/ri";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 const empoweringData = [
   {
@@ -21,6 +21,7 @@ const empoweringData = [
   },
 ];
 const Empowering = () => {
+  const { width, height } = useWindowDimensions();
   const [showIframe, setShowIframe] = useState(false);
   return (
     <section className="w-full flex flex-row items-center gap-10 bg-[url(/empowering_bg.png)] bg-no-repeat bg-center  py-20">
@@ -130,8 +131,8 @@ const Empowering = () => {
           </button>
           <iframe
             className="h-full w-full"
-            width={Dimensions.WindowWidth}
-            height={Dimensions.WindowHeight - 80}
+            width={width}
+            height={height - 80}
             src="https://www.youtube.com/watch?v=crqcHvV_qq0"
           ></iframe>
         </div>

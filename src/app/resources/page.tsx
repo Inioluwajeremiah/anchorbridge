@@ -155,7 +155,7 @@ const Resources = () => {
         currentPage * dataPerPage
       )
     );
-  });
+  }, [currentPage]);
 
   return (
     <section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Dimensions } from "@/utils/Dimension";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Image from "next/image";
 import React, { useState } from "react";
 import { BsPlayCircle } from "react-icons/bs";
@@ -29,9 +29,10 @@ const companyImages: { url: string; title: string }[] = [
 
 const ExtensiveExperience = () => {
   const [showIframe, setShowIframe] = useState(false);
+  const { width, height } = useWindowDimensions();
   return (
     <section
-      style={{ height: Dimensions.WindowHeight - 80 }}
+      style={{ height: height - 80 }}
       className=" bg-black bg-cover w-full bg-no-repeat relative"
     >
       <div className="lg:container h-full mx-auto flex flex-row items-center">
@@ -138,8 +139,8 @@ const ExtensiveExperience = () => {
           </button>
           <iframe
             className="h-full w-full"
-            width={Dimensions.WindowWidth}
-            height={Dimensions.WindowHeight - 80}
+            width={width}
+            height={height - 80}
             src="https://www.youtube.com/embed/MDmKwsFGZT8"
           ></iframe>
         </div>

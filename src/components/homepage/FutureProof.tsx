@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { BsPlayCircle } from "react-icons/bs";
 import { useState } from "react";
-import { Dimensions } from "@/utils/Dimension";
 import { RiCloseCircleFill } from "react-icons/ri";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 const WindowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
 
@@ -12,6 +12,7 @@ console.log("Window Width:", WindowWidth);
 
 const FutureProof = () => {
   const [showIframe, setShowIframe] = useState(false);
+  const { width, height } = useWindowDimensions();
   return (
     <div className="container mx-auto flex flex-row items-start justify-between gap-x-10 h-screen pt-24 ">
       <div className="w-1/2">
@@ -110,8 +111,8 @@ const FutureProof = () => {
           </button>
           <iframe
             className="h-full w-full"
-            width={Dimensions.WindowWidth}
-            height={Dimensions.WindowHeight - 80}
+            width={width}
+            height={height - 80}
             src="https://www.youtube.com/watch?v=crqcHvV_qq0"
           ></iframe>
         </div>
