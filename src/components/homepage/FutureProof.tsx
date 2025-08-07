@@ -1,10 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import futureproof1 from "../../../public/futureproof1.jpg";
-import futureproof2 from "../../../public/futureproof2.jpg";
-import { log } from "console";
-import { Play } from "next/font/google";
 import { BsPlayCircle } from "react-icons/bs";
 import { useState } from "react";
 import { Dimensions } from "@/utils/Dimension";
@@ -36,14 +32,14 @@ const FutureProof = () => {
           People, Process, and Technology—serving small to mid-sized businesses
           with technical talent placement and enterprise technical services.
           Understanding that technology is only as good as the people and
-          processes behind it, We focus on serving businesses in the Retail,
+          processes behind it, we focus on serving businesses in the Retail,
           Logistics, Hospitality and Software Development sectors. We specialize
           in CRM services, website and mobile application development, and staff
           augmentation (both onshore and offshore). Our services are designed to
-          drive meaningful improvements in our clients' businesses' efficiency,
-          functionality, and profitability. We lead with people. We streamline
-          processes. We power growth with technology. Think of Anchor Bridge as
-          your world-class RevOps partner.
+          drive meaningful improvements in our clients&#39; businesses&#39;
+          efficiency, functionality, and profitability. We lead with people. We
+          streamline processes. We power growth with technology. Think of Anchor
+          Bridge as your world-class RevOps partner.
         </p>
 
         <button className="bg-black rounded-full py-4 px-10 cursor-pointer text-white mt-10">

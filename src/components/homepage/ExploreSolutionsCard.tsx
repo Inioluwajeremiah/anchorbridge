@@ -3,14 +3,12 @@ import React from "react";
 import { FaArrowRight, FaThumbsUp } from "react-icons/fa";
 
 export interface IExploreSolutionsCard {
-  index: number;
   title: string;
   description: string;
   link: string;
   imageUrl: string;
 }
 const ExploreSolutionsCard: React.FC<IExploreSolutionsCard> = ({
-  index,
   title,
   description,
   link,

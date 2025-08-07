@@ -12,7 +12,7 @@ const resourcesData: IResourcesCard[] = [
     title: "Top Skills to Look for in Augmented Tech Teams",
     date: "August 1, 2025",
     category: "Staff Augmentation",
-    author: "Media",
+
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2025/08/industrial-designers-working-3d-model-min-scaled.jpg",
     link: "https://anchorbridgeconsulting.com/top-skills-to-look-for-in-augmented-tech-teams/",
@@ -22,7 +22,7 @@ const resourcesData: IResourcesCard[] = [
       "Bridging Borders: Accessible African Tech Talent for the Global Market",
     date: "July 23, 2025",
     category: "News",
-    author: "Media",
+
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2021/10/Remote_Staff_2510723165.jpg",
     link: "https://anchorbridgeconsulting.com/bridging-borders-accessible-african-tech-talent-for-the-global-market/",
@@ -31,7 +31,7 @@ const resourcesData: IResourcesCard[] = [
     title: "Anchor Bridge and Athlos Cloud Partner on Scalable CRM Solutions",
     date: "July 18, 2025",
     category: "CRM services",
-    author: "Media",
+
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2025/07/happy-joyful-diverse-business-partners-greeting-each-other-min-scaled.jpg",
     link: "https://anchorbridgeconsulting.com/anchor-bridge-and-athlos-cloud-partner-on-scalable-crm-solutions/",
@@ -40,7 +40,7 @@ const resourcesData: IResourcesCard[] = [
     title: "How to Build Scalable Mobile Apps: 7 Must-Know Strategies",
     date: "July 17, 2025",
     category: "App Development",
-    author: "Media",
+
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2025/07/man-working-with-computer-side-view-min-scaled.jpg",
     link: "https://anchorbridgeconsulting.com/how-to-build-scalable-mobile-apps-7-must-know-strategies/",
@@ -50,7 +50,7 @@ const resourcesData: IResourcesCard[] = [
       "Staff Augmentation vs. Traditional Hiring: What’s Best for Your Business?",
     date: "June 20, 2025",
     category: "Staff Augmentation",
-    author: "Media",
+
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2025/06/shutterstock_2167684185-scaled.jpg",
     link: "https://anchorbridgeconsulting.com/staff-augmentation-vs-traditional-hiring-whats-best-for-your-business/",
@@ -60,7 +60,7 @@ const resourcesData: IResourcesCard[] = [
       "Anchor Bridge and Dkloud Partners to deliver Salesforce and CRM Solutions",
     date: "June 16, 2025",
     category: "CRM services",
-    author: "Media",
+
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2025/06/shutterstock_2312975143-compressed-scaled.jpg",
     link: "https://anchorbridgeconsulting.com/anchor-bridge-and-dkloud-partners-to-deliver-salesforce-and-crm-solutions/",
@@ -74,7 +74,6 @@ const resourcesData: IResourcesCard[] = [
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2025/06/shutterstock_2149962241-compressed2-scaled.jpg",
     link: "https://anchorbridgeconsulting.com/anchor-bridge-and-ace-talent-partners-to-shape-the-future-of-tech-talent/",
-    author: "Media",
   },
   {
     title:
@@ -84,7 +83,6 @@ const resourcesData: IResourcesCard[] = [
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2025/06/shutterstock_2627344579-scaled.jpg",
     link: "https://anchorbridgeconsulting.com/anchor-bridge-consulting-partners-with-pipedrive-to-deliver-sales-driven-crm-solutions/",
-    author: "Media",
   },
   {
     title: "Anchor Bridge Consulting Joins Monday.com as Authorized Partner",
@@ -93,7 +91,6 @@ const resourcesData: IResourcesCard[] = [
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2022/04/banner-11-1-bg-min-2.jpg",
     link: "https://anchorbridgeconsulting.com/anchor-bridge-consulting-joins-monday-com-as-authorized-partner/",
-    author: "Media",
   },
   {
     title:
@@ -103,7 +100,6 @@ const resourcesData: IResourcesCard[] = [
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/revslider/slider-1/slider-home-12-n-3.jpg",
     link: "https://anchorbridgeconsulting.com/empowering-tech-communities-from-florida-to-lagos-a-week-with-anchor-bridge-consulting/",
-    author: "Media",
   },
   {
     title: "Why Every Business Needs a CRM",
@@ -112,7 +108,6 @@ const resourcesData: IResourcesCard[] = [
     image:
       "https://anchorbridgeconsulting.com/wp-content/uploads/2022/04/banner-12-2-min.jpg",
     link: "https://anchorbridgeconsulting.com/why-every-business-needs-a-crm-benefits-insights-and-best-practices/",
-    author: "Media",
   },
 ];
 
@@ -179,11 +174,9 @@ const page = () => {
               category={resource.category}
               title={resource.title}
               date={resource.date}
-              author={resource.author}
               image={resource.image}
               link={resource.link}
               key={index}
-              index={index}
             />
           ))}
       </div>

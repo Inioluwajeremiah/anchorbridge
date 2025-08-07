@@ -80,7 +80,6 @@ const MediaAndIntelligence = () => {
         {ExploreSolutionsData.map((solution, index) => (
           <MediaAndIntelligenceCard
             key={index}
-            index={index}
             title={solution.title}
             description={solution.description}
             link={solution.link}

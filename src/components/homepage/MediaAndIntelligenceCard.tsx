@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BsPerson, BsPersonFill } from "react-icons/bs";
-import { FaArrowRight, FaThumbsUp } from "react-icons/fa";
+import { BsPersonFill } from "react-icons/bs";
+import { FaArrowRight } from "react-icons/fa";
 
 export interface IMediaAndIntelligenceCard {
-  index: number;
   title: string;
   description: string;
   link: string;
@@ -13,7 +12,6 @@ export interface IMediaAndIntelligenceCard {
   date: string;
 }
 const MediaAndIntelligenceCard: React.FC<IMediaAndIntelligenceCard> = ({
-  index,
   title,
   description,
   link,

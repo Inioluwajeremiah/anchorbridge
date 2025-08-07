@@ -2,23 +2,23 @@
 
 import React, { useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
 import { BsArrowUpCircle } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa6";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { IoPeopleOutline } from "react-icons/io5";
+import Link from "next/link";
 
 export interface IFeatureCard {
   index: number;
   title: string;
   description: string;
   innerDescription: string;
-  link: string;
-  icon?: any;
   cardNumber: string;
+  link: string;
 }
 
-const fadeInUp: any = {
+const fadeInUp: Variants = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
   exit: { opacity: 0, y: -30, transition: { duration: 0.3, ease: "easeIn" } },
@@ -30,7 +30,7 @@ const FeaturesCard: React.FC<IFeatureCard> = ({
   description,
   innerDescription,
   link,
-  icon,
+
   cardNumber,
 }) => {
   const [toggleCard, setToggleCard] = useState(false);
@@ -70,10 +70,13 @@ const FeaturesCard: React.FC<IFeatureCard> = ({
             <p className="text-base text-white text-center">
               {innerDescription}
             </p>
-            <button className="flex flex-row justify-center items-center gap-4 cursor-pointer mt-5">
+            <Link
+              href={link}
+              className="flex flex-row justify-center items-center gap-4 cursor-pointer mt-5"
+            >
               <p className="text-base text-white">Read more</p>
               <FaArrowRight color="white" />
-            </button>
+            </Link>
           </motion.div>
         ) : (
           <motion.div

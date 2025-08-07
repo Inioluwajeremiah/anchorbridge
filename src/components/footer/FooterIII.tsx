@@ -1,5 +1,3 @@
-import { link } from "fs";
-import Link from "next/link";
 import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { PiPhone } from "react-icons/pi";

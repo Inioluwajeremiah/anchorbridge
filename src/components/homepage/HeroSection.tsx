@@ -7,7 +7,7 @@ const FeaturesData = [
     title: "Smarter Systems ",
     description:
       "Close deals faster, reduce turnaround times, and automate your work with the world easiest CRM Solutions.  ",
-    icon: "",
+
     innerDescription:
       "Close deals faster, reduce turnaround times, and automate your work with the world easiest CRM Solutions.  ",
     link: "https://anchorbridgeconsulting.com/service/crm-services",
@@ -16,7 +16,7 @@ const FeaturesData = [
     title: "Smart Solutions                        ",
     description:
       " Turn complexity into clarity with intelligent systems designed to scale with you from strategy to execution.   ",
-    icon: "",
+
     innerDescription:
       "Turn complexity into clarity with intelligent systems designed to scale with you from strategy to execution. ",
     link: "https://anchorbridgeconsulting.com/service/application-development/",
@@ -25,7 +25,7 @@ const FeaturesData = [
     title: "Stronger Teams                        ",
     description:
       "Build high-performing teams with top-tier global talent. Skilled developers and engineers, ready to deliver.  ",
-    icon: "",
+
     innerDescription:
       "Build high-performing teams with top-tier global talent. Skilled developers and engineers, ready to deliver.       ",
     link: "https://anchorbridgeconsulting.com/service/staff-augmentation/",
@@ -39,7 +39,7 @@ const HeroSection = () => {
           <Header fromHome={true} />
           <div className="container mx-auto mt-5 flex flex-col">
             <h1 className=" text-white text-8xl font-[800] leading-[90px] ">
-              It's Time, Create
+              It&#39;s Time, Create
             </h1>
 
             <h1 className="text-6xl text-white font-semibold leading-normal ">
@@ -78,7 +78,6 @@ const HeroSection = () => {
             description={feature.description}
             innerDescription={feature.innerDescription}
             link={feature.link}
-            icon={feature.icon}
             cardNumber={`0${index + 1}`}
             key={index}
           />

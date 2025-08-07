@@ -4,12 +4,9 @@ import { Dimensions } from "@/utils/Dimension";
 import Image from "next/image";
 import React, { useState } from "react";
 import { BsPlayCircle } from "react-icons/bs";
-import { CgClose } from "react-icons/cg";
-import { IoCloseCircleOutline } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { PiPhoneCall } from "react-icons/pi";
-import { RiCloseCircleFill, RiCloseFill } from "react-icons/ri";
-import ReactPlayer from "react-player";
+import { RiCloseCircleFill } from "react-icons/ri";
 
 const companyImages: { url: string; title: string }[] = [
   {

@@ -5,22 +5,18 @@ import React from "react";
 import { BiFolder } from "react-icons/bi";
 
 export interface IResourcesCard {
-  index?: number;
   category: string;
   date: string;
   title: string;
   image: string;
   link: string;
-  author: string;
 }
 const ResourcesCard: React.FC<IResourcesCard> = ({
-  index,
   category,
   date,
   title,
   image,
   link,
-  author,
 }) => {
   return (
     // <Link

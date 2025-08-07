@@ -13,10 +13,10 @@ import storage from "redux-persist/lib/storage";
 
 import utilitySliceReducer from "./slices/utilitySlice";
 
-const persistConfig = {
-  key: "root",
-  storage,
-};
+// const persistConfig = {
+//   key: "root",
+//   storage,
+// };
 
 // Wrap the auth reducer in persistReducer with typed configuration
 

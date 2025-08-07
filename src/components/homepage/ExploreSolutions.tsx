@@ -41,7 +41,7 @@ const ExploreSolutions = () => {
           Empower Your Business
         </h1>
         <p className="text-text-color-dark text-center text-lg">
-          You don't need to think twice, get everything you need to get
+          You don&apos;t need to think twice, get everything you need to get
           organised and make more sales!
         </p>
 
@@ -49,7 +49,6 @@ const ExploreSolutions = () => {
         <div className="lg:container  mx-auto grid grid-cols-3 gap-10 mt-10">
           {ExploreSolutionsData.map((solution, index) => (
             <ExploreSolutionsCard
-              index={index}
               title={solution.title}
               description={solution.description}
               link={solution.link}
