@@ -1,41 +1,7 @@
 import PageHeader from "@/components/PageHeader";
 import ServicesCard from "@/components/services/ServicesCard";
+import { servicesData } from "@/data/servicesData";
 import React from "react";
-
-const servicesData = [
-  {
-    title: "Salesforce-Centric",
-    description:
-      "Our deep Salesforce expertise and commitment to end-to-end delivery help organizations ...",
-    link: "https://anchorbridgeconsulting.com/service/salesforce-centric/",
-    image:
-      "https://anchorbridgeconsulting.com/wp-content/uploads/2021/10/crm-service_2306742311-scaled.jpg",
-  },
-  {
-    title: "Staff Augmentation",
-    description:
-      "Flexible onshore and offshore staffing—bringing Africa’s best tech talent and North America’s…",
-    link: "https://anchorbridgeconsulting.com/service/staff-augmentation/",
-    image:
-      "https://anchorbridgeconsulting.com/wp-content/uploads/2021/10/staffing_2500134851-scaled.jpg",
-  },
-  {
-    title: "CRM Services",
-    description:
-      "Transform how your business operates through our CRM and automation solutions and…",
-    link: "https://anchorbridgeconsulting.com/service/crm-services/",
-    image:
-      "https://anchorbridgeconsulting.com/wp-content/uploads/2021/10/crm-service_2306742311-scaled.jpg",
-  },
-  {
-    title: "Application Development",
-    description:
-      "Building modern, secure, and scalable applications—custom-designed to transform operations, connect...",
-    link: "https://anchorbridgeconsulting.com/service/application-development/",
-    image:
-      "https://anchorbridgeconsulting.com/wp-content/uploads/2021/10/Development_2108122673-scaled.jpg",
-  },
-];
 
 const Services = () => {
   return (
@@ -52,11 +18,22 @@ const Services = () => {
         {servicesData.length > 0 &&
           servicesData.map((service, index) => (
             <ServicesCard
+              id={service.id}
               title={service.title}
               description={service.description}
               imageUrl={service.image}
               link={service.link}
+              links={service.links}
               key={index}
+              introText={service.introText}
+              l1={service.l1}
+              l2={service.l2}
+              l3={service.l3}
+              l4Image={service.l4Image}
+              r1={service.r1}
+              r2={service.r2}
+              r3={service.r3}
+              qaList={service.qaList}
             />
           ))}
       </div>

@@ -13,7 +13,7 @@ const imageUrls = [
 
 const FooterI = () => {
   return (
-    <div className="w-1/4">
+    <div className="w-full">
       <h1 className="text-white text-3xl mb-4">Anchor Bridge Consulting</h1>
       <div className=" flex flex-row flex-wrap items-center gap-2 lg:grid lg:grid-cols-3 mt-4 gap-x-2 lg:w-[270px]  ">
         {imageUrls.map((url, index) => (

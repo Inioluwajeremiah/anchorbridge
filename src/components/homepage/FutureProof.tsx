@@ -14,20 +14,20 @@ const FutureProof = () => {
   const [showIframe, setShowIframe] = useState(false);
   const { width, height } = useWindowDimensions();
   return (
-    <div className="container mx-auto flex flex-row items-start justify-between gap-x-10 h-screen pt-24 ">
-      <div className="w-1/2">
-        <h1 className="text-3xl underline text-primary-color-two">
+    <div className="w-full  lg:container mx-auto flex flex-col lg:flex-row items-start justify-between gap-x-10 lg:h-screen py-10 md:py-14 lg:pt-24 px-5 md:px-10 lg:px-20 lg:pb-0 ">
+      <div className="w-full lg:w-1/2">
+        <h1 className=" scroll-reveal-bottom-top text-xl md:text-2xl lg:text-3xl underline text-primary-color-two">
           Future-proof
         </h1>
-        <h1 className="text-5xl font-bold text-primary-color-two mt-3">
+        <h1 className=" scroll-reveal-bottom-top text-3xl md:text-4xl lg:text-5xl font-bold text-primary-color-two mt-3">
           Build. Scale. Thrive
         </h1>
-        <p className="text-text-color-dark mt-5 text-lg">
+        <p className="scroll-reveal-bottom-top text-text-color-dark mt-5 text-base lg:text-lg">
           Anchor Bridge Consulting is an innovative technology services and
           staff augmentation firm based in Fort Lauderdale, FL, USA and Lagos,
           Nigeria.
         </p>
-        <p className="text-text-color-dark mt-5 text-lg">
+        <p className="scroll-reveal-bottom-top text-text-color-dark mt-5 text-base lg:text-lg">
           We deliver high-impact solutions built around three core pillars:
           People, Process, and Technology—serving small to mid-sized businesses
           with technical talent placement and enterprise technical services.
@@ -42,37 +42,21 @@ const FutureProof = () => {
           Bridge as your world-class RevOps partner.
         </p>
 
-        <button className="bg-black rounded-full py-4 px-10 cursor-pointer text-white mt-10">
+        <button className="scroll-reveal-bottom-top bg-black rounded-full py-4 px-10 cursor-pointer text-white my-10 lg:mb-0">
           About Us
         </button>
       </div>
 
       {/* right div */}
       <div
-        className="max-w-1/2 relative h-fit  flex flex-row items-start  "
+        className="scroll-reveal-bottom-top w-full  lg:max-w-1/2 relative h-fit  flex flex-col gap-4 lg:gap-0 md:flex-row items-start mt-10 md:mt-14 lg:mt-0  "
         // style={{ height: WindowHeight - 80 }}
       >
-        {/* <Image
-          className="h-1/2 rounded-lg absolute top-0 left-0 border border-red-600"
-          alt="futute proof"
-          src={futureproof1}
-          width={WindowWidth / 4}
-          //   height={WindowHeight}
-          objectFit="contain"
-        />
-        <Image
-          className="h-1/2 rounded-lg absolute bottom-0 right-0 border border-green-600 -mt-20"
-          alt="future proof"
-          src={futureproof2}
-          width={WindowWidth / 4}
-          //   height={WindowHeight}
-          objectFit="contain"
-        /> */}
         <div className="h-80 w-80 rounded-full bg-[#f0f3f9] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-20"></div>
 
-        <div className="relative h-[350px] rounded-lg ">
+        <div className="relative w-full md:w-1/2 lg:h-[350px] rounded-lg flex  flex-col md:flex-row lg:flex-col ">
           <Image
-            className="h-full object-cover rounded-lg "
+            className="w-full  h-[350px] lg:h-full object-cover rounded-lg "
             alt="futute proof"
             src="https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/CRM_2101930993-scaled.jpg"
             width={325}
@@ -81,14 +65,14 @@ const FutureProof = () => {
           />
           <button
             onClick={() => setShowIframe(true)}
-            className="bg-black h-20 w-[70px] rounded-br-2xl absolute bottom-0 right-0 flex flex-col justify-center items-center"
+            className="hidden  bg-black h-20 w-[70px] rounded-br-2xl absolute bottom-0 right-0 lg:flex flex-col justify-center items-center"
           >
             <BsPlayCircle color="white" size={20} />
           </button>
         </div>
 
         <Image
-          className="h-[350px] object-cover rounded-lg -ml-32 mt-52 -z-20 "
+          className="w-full md:w-1/2 h-[350px] object-cover rounded-lg  lg:-ml-32 lg:mt-52 lg:-z-20 "
           alt="future proof"
           src="https://anchorbridgeconsulting.com/wp-content/uploads/2021/10/remote_2510723165-scaled.jpg"
           width={325}

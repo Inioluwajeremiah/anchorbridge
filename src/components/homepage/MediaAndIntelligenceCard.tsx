@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { BsPersonFill } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
+import { ILink } from "../PageHeader";
 
 export interface IMediaAndIntelligenceCard {
   title: string;
@@ -10,6 +11,7 @@ export interface IMediaAndIntelligenceCard {
   link: string;
   imageUrl: string;
   date: string;
+  links: ILink[];
 }
 const MediaAndIntelligenceCard: React.FC<IMediaAndIntelligenceCard> = ({
   title,
@@ -17,9 +19,10 @@ const MediaAndIntelligenceCard: React.FC<IMediaAndIntelligenceCard> = ({
   link,
   imageUrl,
   date,
+  links,
 }) => {
   return (
-    <div className="w-[370px] bg-white flex flex-col items-start gap-6 rounded-lg hover:bg-[#f0f3f9]/20 duration-500 ease-linear shadow-box-shadow">
+    <div className="w-full md:w-full lg:w-[370px] bg-white flex flex-col items-start gap-6 rounded-lg hover:bg-[#f0f3f9]/20 duration-500 ease-linear shadow-box-shadow">
       {/* <div className=" h-[250px] bg-none w-full relative hover:bg-black  ">
         <p className="absolute top-4 left-4 px-4 py-2 rounded-lg bg-black hover:bg-white text-white">
           {date}
@@ -69,7 +72,16 @@ const MediaAndIntelligenceCard: React.FC<IMediaAndIntelligenceCard> = ({
           <p className="text-text-color-dark text-lg">{description}</p>
         </div>
         <Link
-          href={link}
+          href={{
+            pathname: link,
+            query: {
+              date,
+              imageUrl,
+              title,
+              description,
+              links: JSON.stringify(links),
+            },
+          }}
           className=" text-lg text-black rounded-full hover:bg-primary-color-three transition duration-300 "
         >
           Readmore <FaArrowRight className="inline ml-2" />

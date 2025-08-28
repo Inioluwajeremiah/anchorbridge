@@ -5,7 +5,7 @@ import { LiaLinkedinIn } from "react-icons/lia";
 
 const FooterIV = () => {
   return (
-    <div className="text-white">
+    <div className=" w-full text-white">
       <h1 className="text-white text-3xl mb-2">Subscribe</h1>
       <p className="text-text-color-light">
         Join our Newsletters to receive Offers and <br /> Updates in your Inbox.

@@ -51,7 +51,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={` min-h-screen flex flex-col ${leagueSpartan.variable} ${geistSans.variable} ${geistMono.variable}  antialiased`}
+        className={`max-w-full min-h-screen flex flex-col ${leagueSpartan.variable} ${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
         <ScrollRevealWrapper>
           <main className="flex-grow">{children}</main>

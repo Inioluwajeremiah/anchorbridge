@@ -3,26 +3,56 @@
 import Link from "next/link";
 import React from "react";
 import { BiFolder } from "react-icons/bi";
+import { ILink } from "../PageHeader";
+import Image from "next/image";
 
 export interface IResourcesCard {
+  id: string;
   category: string;
   date: string;
   title: string;
   image: string;
   link: string;
+  links: ILink[];
+  description: string;
+  content: string;
+  tags: string[];
 }
 const ResourcesCard: React.FC<IResourcesCard> = ({
+  id,
   category,
   date,
   title,
   image,
   link,
+  links,
+  description,
+  content,
+  tags,
 }) => {
   return (
     <Link
-      href={link}
-      className={`w-[30%] h-[50vh] relative rounded-2xl bg-[url(${image})] flex flex-col items-center gap-6 p-6 bg-cover bg-center duration-500 ease-linear shadow-box-shadow text-white group`}
+      href={{
+        pathname: link,
+        query: {
+          id: id,
+          date,
+          image,
+          title,
+          description,
+          links: JSON.stringify(links),
+          content: content,
+          tags: tags,
+        },
+      }}
+      className={`w-[30%] h-[55vh] bg-[#f0f3f9]/20 relative rounded-2xl bg-[url(${image})] flex flex-col items-center gap-6 p-6 bg-cover bg-center duration-500 ease-linear shadow-box-shadow text-white group `}
     >
+      <Image
+        layout="fill"
+        src={image}
+        alt={title + " image"}
+        className="rounded-2xl"
+      />
       {/* Always-visible transparent black background */}
       <div className="absolute inset-0 bg-black/50 z-10 rounded-2xl" />
 

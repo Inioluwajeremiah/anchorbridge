@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header";
 import FeaturesCard from "./FeaturesCard";
+// import "./homepage.css";
 
 const FeaturesData = [
   {
@@ -34,24 +35,27 @@ const FeaturesData = [
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-[url(https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/ABC-BG1-scaled.png)] bg-cover w-full pt-4 pb-44 ">
-        <div className="min-h-screen min-w-screen flex flex-col justify-end items-start  ">
+      {/* rgb(74, 78, 86) */}
+      <div className="bg-[url(https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/ABC-BG1-scaled.png)] bg-[rgb(74,78,86)] bg-center bg-cover bg-no-repeat w-full pt-4 pb-10 md:pb-20 lg:pb-44 ">
+        <div className="mt-40 lg:mt-0 lg:min-h-screen  min-w-screen flex flex-col justify-end items-start  ">
           <Header fromHome={true} />
-          <div className="container mx-auto mt-5 flex flex-col">
-            <h1 className=" text-white text-8xl font-[800] leading-[90px] ">
-              It&#39;s Time, Create
-            </h1>
+          <div className="w-full lg:container mx-auto mt-20 lg:mt-5 flex flex-col px-5 md:px-10 lg:px-20 ">
+            <div className="top-down-slide-animation">
+              <h1 className=" text-white text-5xl md:text-6xl lg:text-8xl font-[800] leading-[60px] md:leading-[70px] lg:leading-[90px] ">
+                It&#39;s Time, Create
+              </h1>
 
-            <h1 className="text-6xl text-white font-semibold leading-normal ">
-              Tech-Driven Solutions.
-            </h1>
+              <h1 className="text-3xl md:text-4xl lg:text-6xl text-white font-semibold leading-normal ">
+                Tech-Driven Solutions.
+              </h1>
 
-            <p className=" mt-5 text-xl text-text-color-light">
-              Empowering businesses through scalable systems, high-impact tech
-              talent, and actionable strategy.
-            </p>
+              <p className="mt-5 text-lg md:text-lg lg:text-xl text-text-color-light">
+                Empowering businesses through scalable systems, high-impact tech
+                talent, and actionable strategy.
+              </p>
+            </div>
 
-            <div className="flex flex-row items-center mt-10 gap-x-4  mb-24">
+            <div className="left-right-slide-animation flex flex-col sm:flex-row items-start sm:items-center mt-10 gap-4 mb-20 lg:mb-24">
               <a
                 href="https://anchorbridgeconsulting.com/service/crm-services/"
                 className="bg-[#040307] p-4 text-lg hover:bg-white hover:text-black text-white rounded-full duration-1000 ease-in-out"
@@ -70,7 +74,7 @@ const HeroSection = () => {
       </div>
 
       {/* features */}
-      <div className="lg:container  mx-auto grid grid-cols-3 gap-10 -mt-24">
+      <div className="lg:container scroll-reveal-bottom-top  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 mt-10 md:mt-20 lg:-mt-24 px-5 md:px-10 lg:px-20 ">
         {FeaturesData.map((feature, index) => (
           <FeaturesCard
             index={index}

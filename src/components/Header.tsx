@@ -50,9 +50,9 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
 
   return (
     <header
-      className=" w-full h-36 z-50"
+      className={`${fromHome ? "lg:top-20 top-0" : "top-0"} w-full h-36 z-50"`}
       style={{
-        top: fromHome ? 20 : 0,
+        // top: fromHome ? 20 : 0,
         position: fromHome ? "absolute" : "relative",
       }}
     >
@@ -61,7 +61,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
       {/* main header */}
       <div className={`${!fromHome && "w-full bg-white"}`}>
         <div
-          className={`bg-white lg:container lg:w-full mx-auto h-20 flex flex-row items-center justify-between px-5 rounded-b-lg`}
+          className={`bg-white lg:container lg:w-full mx-auto h-20 flex flex-row items-center justify-between px-5 md:px-10 lg:px-20 rounded-b-lg`}
         >
           <div className="w-[20%]">
             {/* logo */}
@@ -82,8 +82,8 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
               className={`text-sm md:text-xl lg:text-2xl fixed z-20 lg:relative lg:h-fit lg:flex lg:flex-row lg:items-center overflow-hidden 
             ${
               toggleMenu
-                ? ` top-20 w-full flex flex-col items-center justify-center left-0 bg-bg-color transition ease-in-out duration-[700ms]`
-                : "-left-[1500px] lg:left-5 "
+                ? ` top-20 w-full flex flex-col items-center justify-center left-0 bg-blu transition ease-in-out duration-[700ms]`
+                : "-left-[1500px] lg:left-5 bg-white  "
             }
             `}
               style={{ height: toggleMenu ? navHeight : "" }}
@@ -113,7 +113,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
           <div>
             {/* search and menu button */}
 
-            <div className="flex flex-row items-center gap-x-4 ">
+            <div className="hidden lg:flex flex-row items-center gap-x-4 ">
               <button className="h-9 w-9 cursor-pointer">
                 <BiSearch />
               </button>
@@ -121,12 +121,12 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
               {/* crm button */}
 
               {location !== "/" && (
-                <button className="bg-black hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 text-sm font-bold cursor-pointer duration-500">
+                <button className="bg-black hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 text-sm font-bold cursor-pointer duration-1000">
                   CRM Services
                 </button>
               )}
               {/* drop down */}
-              <button className="w-[54px] h-[54px] rounded-full border border-gray-300 flex justify-center items-center cursor-pointer">
+              <button className="hidden w-[54px] h-[54px] rounded-full border border-gray-300 lg:flex justify-center items-center cursor-pointer">
                 <div className="bg-black h-9 w-9 transition-all duration-300 ease-out hover:scale-[1.5] rounded-full p-2 flex justify-center items-center">
                   <CgMenuGridR color="#fff" size={20} className="" />
                 </div>

@@ -41,7 +41,11 @@ const ExploreSolutionsData = [
     title: "Why Every Business Needs a CRM",
     description:
       "In today’s fast-paced business environment, staying competitive demands more than just great products…",
-    link: "https://anchorbridgeconsulting.com/why-every-business-needs-a-crm-benefits-insights-and-best-practices/",
+    link: "/why-every-business-needs-a-crm-benefits-insights-and-best-practices/",
+    links: [
+      { title: "Home", url: "/" },
+      { title: "CRM Services", url: "/category/crm-services/" },
+    ],
   },
   {
     date: "August 1, 2025",
@@ -50,7 +54,11 @@ const ExploreSolutionsData = [
     title: "Top Skills to Look for in Augmented Tech Teams",
     description:
       "Augmented tech teams are becoming the go-to solution for businesses looking to stay…",
-    link: "https://anchorbridgeconsulting.com/top-skills-to-look-for-in-augmented-tech-teams/",
+    link: "/top-skills-to-look-for-in-augmented-tech-teams/",
+    links: [
+      { title: "Home", url: "/" },
+      { title: "Staff Augmentation", url: "/category/staff-augmentation/" },
+    ],
   },
   {
     date: "June 20, 2025",
@@ -60,23 +68,27 @@ const ExploreSolutionsData = [
       "Staff Augmentation vs. Traditional Hiring: What’s Best for Your Business?",
     description:
       "In today’s fast-evolving tech landscape, companies are under pressure to innovate faster, adapt…",
-    link: "https://anchorbridgeconsulting.com/staff-augmentation-vs-traditional-hiring-whats-best-for-your-business/",
+    link: "/staff-augmentation-vs-traditional-hiring-whats-best-for-your-business/",
+    links: [
+      { title: "Home", url: "/" },
+      { title: "Staff Augmentation", url: "/category/staff-augmentation/" },
+    ],
   },
 ];
 
 const MediaAndIntelligence = () => {
   return (
-    <section className=" bg-[#f0f3f9] py-20 ">
-      <div className="container mx-auto">
-        <h1 className="text-3xl text-center underline text-primary-color-two">
+    <section className="w-full bg-[#f0f3f9] py-20 ">
+      <div className="w-full lg:container mx-auto">
+        <h1 className="scroll-reveal-bottom-top text-xl md:text-2xl lg:text-3xl text-center underline text-primary-color-two">
           Media
         </h1>
-        <h1 className="text-5xl text-center font-bold text-primary-color-two my-5">
+        <h1 className="scroll-reveal-bottom-top text-3xl md:text-4xl lg:text-5xl text-center font-bold text-primary-color-two my-5">
           Insights & Intelligence
         </h1>
       </div>
 
-      <div className="lg:container  mx-auto grid grid-cols-3 gap-10 mt-10">
+      <div className="w-full lg:container scroll-reveal-bottom-top mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 lg:gap-10 mt-10">
         {ExploreSolutionsData.map((solution, index) => (
           <MediaAndIntelligenceCard
             key={index}
@@ -85,6 +97,7 @@ const MediaAndIntelligence = () => {
             link={solution.link}
             imageUrl={solution.imageUrl}
             date={solution.date}
+            links={solution.links}
           />
         ))}
       </div>

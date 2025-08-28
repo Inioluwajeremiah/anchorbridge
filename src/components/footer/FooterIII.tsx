@@ -19,7 +19,7 @@ const linksData = [
 
 const FooterIII = () => {
   return (
-    <div className="text-white flex flex-col justify-start items-start">
+    <div className="w-full text-white flex flex-col justify-start items-start">
       <h1 className="text-white text-3xl mb-2">Get In Touch</h1>
       <div className="flex flex-col justify-start items-start">
         {linksData.map((link, index) => (

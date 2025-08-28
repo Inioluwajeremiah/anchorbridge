@@ -33,20 +33,20 @@ const ExploreSolutionsData = [
 const ExploreSolutions = () => {
   return (
     <section className=" bg-[#f0f3f9] py-20 ">
-      <div className="container mx-auto">
-        <h1 className="text-3xl text-center underline text-primary-color-two">
+      <div className="w-full lg:container mx-auto px-5 md:px-10 lg:px-20">
+        <h1 className=" scroll-reveal-bottom-top text-xl md:text-2xl lg:text-3xl text-center underline text-primary-color-two">
           Explore Solutions
         </h1>
-        <h1 className="text-5xl text-center font-bold text-primary-color-two my-5">
+        <h1 className="scroll-reveal-bottom-top text-3xl md:text-4xl lg:text-5xl text-center font-bold text-primary-color-two my-5">
           Empower Your Business
         </h1>
-        <p className="text-text-color-dark text-center text-lg">
+        <p className="scroll-reveal-bottom-top text-text-color-dark text-center text-base lg:text-lg">
           You don&apos;t need to think twice, get everything you need to get
           organised and make more sales!
         </p>
 
         {/* explore solutions */}
-        <div className="lg:container  mx-auto grid grid-cols-3 gap-10 mt-10">
+        <div className="scroll-reveal-bottom-top w-full lg:container  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {ExploreSolutionsData.map((solution, index) => (
             <ExploreSolutionsCard
               title={solution.title}

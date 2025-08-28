@@ -19,7 +19,7 @@ export const navLinks = [
   },
   {
     label: "Resources",
-    href: "/resources",
+    href: "/media",
     matchHash: "#resources",
     isPrimary: false,
   },

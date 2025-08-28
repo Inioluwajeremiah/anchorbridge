@@ -1,0 +1,73 @@
+@keyframes top-down-slide-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.top-down-slide-animation {
+  animation: top-down-slide-animation 2s ease forwards;
+}
+
+@keyframes left-right-slide-animation {
+  0% {
+    transform: translateX(50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.left-right-slide-animation {
+  animation: left-right-slide-animation 2s ease forwards;
+  transform-origin: left center;
+}
+
+@keyframes scroll-reveal-bottom-top {
+  0% {
+    transform: translateY(100%); /* starts lower */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* moves up to natural position */
+    opacity: 1;
+  }
+}
+
+.scroll-reveal-bottom-top {
+  animation: scroll-reveal-bottom-top 1s linear both;
+  /* animation-timeline: view();
+  animation-range: entry 0% cover 40%; */
+}
+
+/* Base styles */
+.animate-scroll {
+  animation: scrollHorizontal 5s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: reverseHorizontalScroll 5s linear infinite;
+}
+
+/* Keyframes */
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--scrollWidth)));
+  }
+}
+
+@keyframes reverseHorizontalScroll {
+  0% {
+    transform: translateX(calc(-1 * var(--scrollWidth)));
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
