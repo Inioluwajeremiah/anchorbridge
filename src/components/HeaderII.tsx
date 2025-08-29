@@ -86,9 +86,9 @@ const HeaderII = ({}) => {
             style={{
               height: toggleMenu
                 ? navHeight
-                : !toggleMenu && window.innerWidth < 1024
-                ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
-                : "",
+                : // : !toggleMenu && windowWidth < 1024
+                  // ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
+                  "",
             }}
           >
             {/* menu items */}
@@ -104,9 +104,9 @@ const HeaderII = ({}) => {
               style={{
                 height: toggleMenu
                   ? navHeight
-                  : !toggleMenu && window.innerWidth < 1024
-                  ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
-                  : "",
+                  : // : !toggleMenu && windowWidth < 1024
+                    // ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
+                    "",
               }}
             >
               {/* search box on navbar only */}

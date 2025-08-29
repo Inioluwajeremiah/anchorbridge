@@ -74,7 +74,7 @@ const Page = () => {
     );
     setFilteredData(filteredData);
     setCurrentPage(1);
-  }, [parsedLink, parsedLink[parsedLink.length - 1].title]);
+  }, [parsedLink]);
 
   useEffect(() => {
     if (filteredData.length > 0) {

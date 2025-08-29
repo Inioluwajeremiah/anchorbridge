@@ -106,11 +106,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
   `}
               onClick={handleToggleMenu}
               style={{
-                height: toggleMenu
-                  ? navHeight
-                  : !toggleMenu && window.innerWidth < 1024
-                  ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
-                  : "",
+                height: toggleMenu ? navHeight : "",
               }}
             >
               {/* menu items */}
@@ -126,10 +122,11 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
                 style={{
                   height: toggleMenu
                     ? navHeight
-                    : !toggleMenu && window.innerWidth < 1024
-                    ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
-                    : "",
+                    : // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
+                      "",
                 }}
+                // : !toggleMenu && windowWidth < 1024
+                //     ? navHeight
               >
                 {/* search box on navbar only */}
                 <div className={`lg:hidden w-[94%] mx-auto`}>
