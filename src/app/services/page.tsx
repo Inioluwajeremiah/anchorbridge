@@ -14,7 +14,7 @@ const Services = () => {
         ]}
       />
 
-      <div className="lg:container px-5 w-full self-center mx-auto flex flex-row justify-start items-center flex-wrap mt-10 gap-x-10 gap-y-12 py-20">
+      <div className="lg:container px-5 w-full self-center mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-start items-center flex-wrap mt-10 gap-x-10 gap-y-12 py-20">
         {servicesData.length > 0 &&
           servicesData.map((service, index) => (
             <ServicesCard

@@ -60,7 +60,7 @@ const ServicesCard: React.FC<IServicesCard> = ({
   qaList,
 }) => {
   return (
-    <div className="bg-white w-[30%] border-t border-t-black flex flex-col justify-center items-center gap-6 rounded-b-lg border border-text-color-light shadow-box-shadow cursor-pointer group  relative">
+    <div className="bg-white w-full border-t border-t-black flex flex-col justify-center items-center gap-6 rounded-b-lg border border-text-color-light shadow-box-shadow cursor-pointer group  relative">
       {/* Image Container */}
       <div className="relative w-full h-[250px] overflow-hidden">
         <Image
@@ -84,10 +84,10 @@ const ServicesCard: React.FC<IServicesCard> = ({
 
       {/* Content Section */}
       <div className="px-6 pb-6 flex flex-col justify-center items-center gap-6">
-        <h2 className="text-2xl font-bold text-primary-color-two text-center">
+        <h2 className="text-xl lg:text-2xl font-bold text-primary-color-two text-center">
           {title}
         </h2>
-        <p className="text-center text-text-color-dark text-lg">
+        <p className="text-center text-text-color-dark text-sm md:text-base lg:text-lg">
           {description}
         </p>
         <Link
@@ -111,7 +111,7 @@ const ServicesCard: React.FC<IServicesCard> = ({
               qaList: JSON.stringify(qaList),
             },
           }}
-          className="h-14 px-6 text-lg flex flex-row justify-center items-center bg-black text-white rounded-full hover:bg-primary-color-three transition duration-300 -mb-12"
+          className="h-14 px-6 text-sm md:text-lg flex flex-row justify-center items-center bg-black text-white rounded-full hover:bg-primary-color-three transition duration-300 -mb-12"
         >
           Readmore <FaArrowRight className="inline ml-2" />
         </Link>

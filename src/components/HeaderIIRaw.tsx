@@ -13,7 +13,6 @@ import { CgMenuGridR } from "react-icons/cg";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Modal from "./Modal";
 import ContactModal from "./homepage/ContactModal";
-import { GrClose } from "react-icons/gr";
 
 const HeaderII = ({}) => {
   const location = usePathname();
@@ -25,14 +24,10 @@ const HeaderII = ({}) => {
   const [windowWidth, setWindowWidth] = useState(width);
   const [toggleModal, setToggleModal] = useState(false);
 
-  const navHeight = height + 200;
+  const navHeight = height - 80;
 
-  const handleToggleMenu = (e: any) => {
-    const target = e.target;
-    if (target.id !== "navMenu") {
-      setToggleMenu(false);
-    }
-    // setToggleMenu(false);
+  const handleToggleMenu = () => {
+    setToggleMenu(false);
   };
   const handleToggleModal = () => {
     setToggleModal(!toggleModal);
@@ -78,82 +73,38 @@ const HeaderII = ({}) => {
             </Link>
           </div>
 
-          <div
-            className={`fixed lg:relative left-0 top-0 w-full h-screen lg:h-auto bg-white/50 z-50 transition-transform ease-in-out duration-1000 flex flex-row justify-start items-start lg:justify-center lg:items-center
-    ${toggleMenu ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-  `}
-            onClick={handleToggleMenu}
-            style={{
-              height: toggleMenu
-                ? navHeight
-                : !toggleMenu && window.innerWidth < 1024
-                ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
-                : "",
-            }}
-          >
+          <div className="flex flex-row items-center">
             {/* menu items */}
             <nav
-              id="navMenu"
-              className={`text-sm md:text-xl lg:text-2xl fixed z-20 lg:relative lg:h-fit lg:flex lg:flex-row lg:items-center 
-                 ${
-                   toggleMenu
-                     ? ` w-full md:w-1/2 flex flex-col items-start justify-start bg-white`
-                     : `bg-white`
-                 }
-                `}
-              style={{
-                height: toggleMenu
-                  ? navHeight
-                  : !toggleMenu && window.innerWidth < 1024
-                  ? navHeight // this produces inperfect behaviour in the sense that not the full screen slides back that is why min-h-[2000px] was used
-                  : "",
-              }}
+              className={`text-sm md:text-xl lg:text-2xl fixed z-20 lg:relative lg:h-fit lg:flex lg:flex-row lg:items-center overflow-hidden 
+            ${
+              toggleMenu
+                ? ` top-20 w-full flex flex-col items-center justify-center left-0 bg-white/50 transition ease-in-out duration-[700ms]`
+                : "-left-[1500px] lg:left-5 "
+            }
+            `}
+              style={{ height: toggleMenu ? navHeight : "" }}
             >
-              {/* search box on navbar only */}
-              <div className={`lg:hidden w-[94%] mx-auto`}>
-                {/* close button */}
-                <button
-                  onClick={handleToggleMenu}
-                  className="h-12 w-12 flex flex-col items-center justify-center ml-auto rounded-full border border-border-color-dark mt-10 "
-                >
-                  <GrClose size={20} color=" #e4e7ee" />
-                </button>
-                <div className="w-full flex flex-row items-center border border-border-color-dark rounded-lg p-2 mt-4">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="flex-1 font-thin"
-                  />
-                  <div className="h-9 w-9 flex flex-col justify-center items-center shadow-md rounded-md bg-black">
-                    <BiSearch size={24} color="#fff" />
-                  </div>
-                </div>
-              </div>
               {navLinks.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
                   onClick={handleToggleMenu}
-                  className={` p-4 text-lg font-bold  ${
+                  className={`p-4 text-lg font-bold rounded-md ${
                     toggleMenu
-                      ? `px-4 ${
-                          index === navLinks.length - 1
-                            ? ""
-                            : "border-b border-b-border-color-dark"
-                        } pt-6 pb-2 w-[94%] px-0 rounded-none `
+                      ? "translate-x-4 ease-linear duration-[700ms]"
                       : ""
                   }`}
                   style={{
-                    color: pathname === item.href ? "#078586" : "",
+                    color: pathname === item.href ? "#078586" : "#000",
                     marginRight: 10,
-                    // marginBottom: toggleMenu ? 40 : "",
+                    marginBottom: toggleMenu ? 40 : "",
                   }}
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
-            <div className="hidden md:w-1/2 bg-white/50 lg:none"></div>
           </div>
 
           <div>

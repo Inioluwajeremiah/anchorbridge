@@ -44,15 +44,6 @@
   animation-range: entry 0% cover 40%; */
 }
 
-/* Base styles */
-.animate-scroll {
-  animation: scrollHorizontal 5s linear infinite;
-}
-
-.animate-scroll-reverse {
-  animation: reverseHorizontalScroll 5s linear infinite;
-}
-
 /* Keyframes */
 @keyframes scrollHorizontal {
   0% {
@@ -70,4 +61,13 @@
   100% {
     transform: translateX(50%);
   }
+}
+
+/* Base styles */
+.animate-scroll {
+  animation: scrollHorizontal 5s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: reverseHorizontalScroll 5s linear infinite;
 }

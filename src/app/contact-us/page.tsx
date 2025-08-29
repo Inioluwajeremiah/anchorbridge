@@ -13,7 +13,7 @@ const ContactUsPage = () => {
           { title: "Contact Us", url: "/contact-us" },
         ]}
       />
-      <div className="lg:container mx-auto px-5 flex flex-row items-start py-20 gap-10">
+      <div className="w-[94%] lg:container mx-auto px-5 flex flex-col lg:flex-row items-start py-20 gap-10">
         <ContactForm />
         <Contact />
       </div>

@@ -21,10 +21,12 @@ const SubServiceCard: React.FC<ISubServiceCard> = ({ title, description }) => {
     <div className="rounded-2xl p-6 shadow-lg flex flex-row items-start gap-x-6 mt-4">
       <Image alt={title + "icon"} src={ServiceIcon} width={50} height={50} />
       <div>
-        <h3 className="text-2xl text-primary-color-two font-semibold">
+        <h3 className="text-xl lg:text-2xl text-primary-color-two font-semibold">
           {title}
         </h3>
-        <p className="mt-4 text-text-color-dark text-lg">{description}</p>
+        <p className="mt-4 text-text-color-dark text-base lg:text-lg">
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -85,9 +87,9 @@ const page = () => {
         mediaDetails={false}
       />
       {/* main content */}
-      <div className="lg:container mx-auto flex flex-row items-start min-h-[50vh] ">
+      <div className="lg:container mx-auto flex flex-col-reverse lg:flex-row items-start min-h-[50vh] ">
         {/* navbar */}
-        <div className="w-[30%] py-20 border-r border-r-border-color-dark  pr-20">
+        <div className="w-[94%] mx-auto lg:mx-0 lg:w-[30%] py-20 lg:border-r border-r-border-color-dark   lg:pr-20">
           {/* our services */}
           <h2 className="text-lg font-bold mt-10 text-start text-text-color-dark relative before:content-[''] before:inline-block before:w-8 before:h-0.5 before:bg-text-color-dark before:mr-2 before:ml-2 before:align-middle after:content-[''] after:inline-block after:w-2 after:h-2 after:bg-text-color-dark after:mr-2 after:align-middle after:rounded-full after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2 ">
             Our Services
@@ -129,7 +131,7 @@ const page = () => {
             <Image
               layout="fill"
               alt={filteredData?.title + " image"}
-              className="rounded-2xl"
+              className="rounded-2xl object-center object-cover"
               src={
                 "https://themepanthers.com/wp/creote/v-new/wp-content/uploads/2021/10/service-sidebar-contact-bg.jpg"
               }
@@ -155,18 +157,18 @@ const page = () => {
           </div>
         </div>
 
-        <div className="w-[70%]  py-20 pl-10">
-          <h1 className="text-text-color-dark font-semibold text-4xl">
+        <div className="w-[94%] mx-auto lg:mx-0 lg:w-[70%]  py-20 lg:pl-10">
+          <h1 className="text-text-color-dark font-semibold text-2xl md:text-3xl lg:text-4xl">
             {filteredData?.title}
           </h1>
-          <p className="text-lg text-text-color-dark mt-4">
+          <p className="text-base lg:text-lg text-text-color-dark mt-4">
             {filteredData?.introText}
           </p>
 
-          <div className="flex flex-row items-start gap-x-10 mt-6 ">
+          <div className="flex flex-col lg:flex-row items-start gap-x-10 mt-6 ">
             {/* left div */}
-            <div className="w-1/2">
-              <p className="mt-4 text-lg text-text-color-dark">
+            <div className="w-full lg:w-1/2">
+              <p className="mt-4 text-base lg:text-lg text-text-color-dark">
                 {filteredData?.l1}
               </p>
 
@@ -193,7 +195,7 @@ const page = () => {
               />
             </div>
             {/* right div */}
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               {filteredData?.r1 && (
                 <SubServiceCard
                   title={filteredData?.r1.title}
@@ -207,7 +209,7 @@ const page = () => {
                 />
               )}
 
-              <h1 className="mt-10 text-text-color-dark text-3xl font-semibold">
+              <h1 className="mt-10 text-text-color-dark text-xl md:text-2xl lg:text-3xl font-semibold">
                 {filteredData?.r3.title}
               </h1>
               <p className="text-text-color-dark mt-4 text-lg">
@@ -216,10 +218,10 @@ const page = () => {
 
               {filteredData?.r3.lists.map((item: IL1, index: number) => (
                 <div key={index} className="mt-10 ">
-                  <h3 className="font-semibold text-xl text-text-color-dark">
+                  <h3 className="font-semibold text-lg: lg:text-xl text-text-color-dark">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-text-color-dark mt-4">
+                  <p className="text-base lg:text-lg text-text-color-dark mt-4">
                     {item.description}
                   </p>
                 </div>
@@ -231,7 +233,7 @@ const page = () => {
 
           {/* questions and answers block */}
 
-          <h1 className="text-text-color-dark font-semibold text-4xl mt-10">
+          <h1 className="text-text-color-dark font-semibold text-2xl md:text-3xl lg:text-4xl mt-10">
             {filteredData?.qaList.title}
           </h1>
 
@@ -246,7 +248,7 @@ const page = () => {
                   activeQa === index.toString() ? "bg-white" : ""
                 } flex flex-row justify-between items-center border border-border-color-dark rounded-lg p-4`}
               >
-                <label className="text-text-color-dark text-lg">
+                <label className="text-text-color-dark text-base  lg:text-lg">
                   {item.question}
                 </label>
                 <span
@@ -273,7 +275,7 @@ const page = () => {
               {/* )} */}
 
               <p
-                className={` text-lg text-link-color-dark transition-all duration-1000 ease-in-out ${
+                className={`text-base lg:text-lg text-link-color-dark transition-all duration-1000 ease-in-out ${
                   activeQa === index.toString()
                     ? "opacity-100 h-fit p-4"
                     : "opacity-0 h-0"

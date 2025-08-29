@@ -23,14 +23,14 @@ const linksData = [
 
 const Contact = () => {
   return (
-    <div className="w-1/2 p-7">
-      <h1 className="text-3xl underline text-primary-color-two">
+    <div className="w-full lg:w-1/2 p-7">
+      <h1 className="text-xl md:text-2xl lg:text-3xl underline text-primary-color-two">
         People Process Technology
       </h1>
-      <h1 className="text-5xl font-bold text-primary-color-two my-5">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-color-two my-5">
         Talk To Our Expert Team
       </h1>
-      <p className="text-text-color-dark text-lg">
+      <p className="text-text-color-dark text-base lg:text-lg">
         Send a message through given form or call If your enquiry is time
         sensitive please use below contact details.
       </p>
@@ -49,8 +49,12 @@ const Contact = () => {
               )}
             </div>
             <div>
-              <p className="text-xl font-bold">{link.title}</p>
-              <p className="text-lg mt-1">{link.description}</p>
+              <p className="text-base md:text-lg lg:text-xl font-bold">
+                {link.title}
+              </p>
+              <p className="text-sm md:text-base lg:text-lg mt-1">
+                {link.description}
+              </p>
             </div>
           </div>
         ))}

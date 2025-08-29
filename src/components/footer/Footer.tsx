@@ -4,6 +4,7 @@ import FooterI from "./FooterI";
 import FooterII from "./FooterII";
 import FooterIII from "./FooterIII";
 import FooterIV from "./FooterIV";
+import ScrollIndicator from "../ScrollIndicator";
 
 const Footer = () => {
   return (
@@ -15,6 +16,8 @@ const Footer = () => {
           <FooterII />
           <FooterIII />
           <FooterIV />
+          {/* scroll indicator */}
+          <ScrollIndicator />
         </div>
       </div>
       {/* bottom footer */}

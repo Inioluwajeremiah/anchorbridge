@@ -14,7 +14,7 @@ const FutureProof = () => {
   const [showIframe, setShowIframe] = useState(false);
   const { width, height } = useWindowDimensions();
   return (
-    <div className="w-full  lg:container mx-auto flex flex-col lg:flex-row items-start justify-between gap-x-10 lg:h-screen py-10 md:py-14 lg:pt-24 px-5 md:px-10 lg:px-20 lg:pb-0 ">
+    <div className="w-[94%]  lg:container mx-auto flex flex-col lg:flex-row items-start justify-between gap-x-10 py-10 md:py-14 lg:pt-24 px-5 md:px-10 lg:px-20 lg:pb-10 ">
       <div className="w-full lg:w-1/2">
         <h1 className=" scroll-reveal-bottom-top text-xl md:text-2xl lg:text-3xl underline text-primary-color-two">
           Future-proof
@@ -42,7 +42,7 @@ const FutureProof = () => {
           Bridge as your world-class RevOps partner.
         </p>
 
-        <button className="scroll-reveal-bottom-top bg-black rounded-full py-4 px-10 cursor-pointer text-white my-10 lg:mb-0">
+        <button className="scroll-reveal-bottom-top bg-black rounded-full py-4 px-10 cursor-pointer text-white my-10 lg:mb--0">
           About Us
         </button>
       </div>

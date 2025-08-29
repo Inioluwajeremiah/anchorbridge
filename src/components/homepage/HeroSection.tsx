@@ -37,9 +37,9 @@ const HeroSection = () => {
     <>
       {/* rgb(74, 78, 86) */}
       <div className="bg-[url(https://anchorbridgeconsulting.com/wp-content/uploads/2025/05/ABC-BG1-scaled.png)] bg-[rgb(74,78,86)] bg-center bg-cover bg-no-repeat w-full pt-4 pb-10 md:pb-20 lg:pb-44 ">
-        <div className="mt-40 lg:mt-0 lg:min-h-screen  min-w-screen flex flex-col justify-end items-start  ">
+        <div className="mt-40 lg:mt-0  min-w-screen flex flex-col justify-end items-start  ">
           <Header fromHome={true} />
-          <div className="w-full lg:container mx-auto mt-20 lg:mt-5 flex flex-col px-5 md:px-10 lg:px-20 ">
+          <div className="w-full lg:container mx-auto mt-20 lg:mt-96 flex flex-col px-5 md:px-10 lg:px-20 ">
             <div className="top-down-slide-animation">
               <h1 className=" text-white text-5xl md:text-6xl lg:text-8xl font-[800] leading-[60px] md:leading-[70px] lg:leading-[90px] ">
                 It&#39;s Time, Create

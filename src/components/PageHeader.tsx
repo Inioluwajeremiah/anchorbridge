@@ -21,7 +21,7 @@ const PageHeader: React.FC<IPageHeader> = ({ title, links, mediaDetails }) => {
         <div className="lg:container mx-auto  h-full">
           <div className=" flex flex-col justify-between items-start h-full ">
             <div className=" flex-1 w-full flex flex-col justify-center items-center">
-              <h1 className="text-white max-w-[60%] text-5xl font-bold text-center">
+              <h1 className="text-white max-w-[60%] text-3xl md:text-4xl lg:text-5xl font-bold text-center">
                 {title}
               </h1>
 
