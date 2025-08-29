@@ -78,7 +78,7 @@ const RelatedPosts: React.FC<IRelatedPosts> = ({ currentResourceId }) => {
       {/* Related posts */}
       <div className=" flex flex-row justify-center items-center flex-wrap mt-10 gap-5">
         {currentData.length > 0 &&
-          currentData.map((item, _) => (
+          currentData.map((item) => (
             <RelatedPostCard
               id={item.id}
               category={item.category}

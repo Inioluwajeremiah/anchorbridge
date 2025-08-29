@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BsPersonFill } from "react-icons/bs";
-import { FaArrowRight } from "react-icons/fa";
-import { ILink } from "../PageHeader";
 import { IResourcesCard } from "../resources/ResourcesCard";
 
 const RelatedPostCard: React.FC<IResourcesCard> = ({

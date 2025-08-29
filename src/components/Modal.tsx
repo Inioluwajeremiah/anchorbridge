@@ -1,5 +1,4 @@
 import React, { ReactNode, useState } from "react";
-import { GiCancel } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 
 interface ModalProps {
@@ -13,7 +12,7 @@ const Modal: React.FC<ModalProps> = ({
   toggleModal,
   handleToggleModal,
 }) => {
-  const [showModal, setShowModal] = useState(true);
+  const [_, setShowModal] = useState(true);
 
   const handleCloseModal = (e: any) => {
     const target = e.target;

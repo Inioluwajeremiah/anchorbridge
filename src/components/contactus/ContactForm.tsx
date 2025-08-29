@@ -6,12 +6,10 @@ import {
   BsFillChatFill,
   BsFillEnvelopeFill,
   BsFillFolderFill,
-  BsPeople,
   BsPeopleFill,
 } from "react-icons/bs";
-import { BiChat, BiEnvelope, BiFolder } from "react-icons/bi";
-import { PiPhone, PiPhoneFill } from "react-icons/pi";
-import { MdMessage } from "react-icons/md";
+import { PiPhoneFill } from "react-icons/pi";
+
 import Link from "next/link";
 
 const ContactForm = () => {

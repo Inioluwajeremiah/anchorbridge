@@ -4,9 +4,6 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { BsPersonFill } from "react-icons/bs";
-import { FaArrowRight } from "react-icons/fa";
-import { ILink } from "../PageHeader";
 import { IResourcesCard } from "../resources/ResourcesCard";
 import { BiFolder } from "react-icons/bi";
 

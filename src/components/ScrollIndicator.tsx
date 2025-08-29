@@ -1,36 +1,3 @@
-// "use client";
-
-// import { useEffect, useRef, useState } from "react";
-
-// const ScrollIndicator = () => {
-//   const scrollRef = useRef<HTMLProgressElement | null>(null);
-//   const [scrollSize, setScrollSize] = useState(0);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       if (scrollRef.current) {
-//         const scrollHeight = window.scrollY;
-//         const screenHeight =
-//           document.documentElement.scrollHeight - window.innerHeight;
-
-//         const percentage = Math.floor((scrollHeight / screenHeight) * 100);
-//         scrollRef.current.value = percentage;
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <progress
-//       ref={scrollRef}
-//       max="100"
-//       className="w-12 h-12 rounded-full fixed bottom-32 right-20 bg-green-700"
-//     />
-//   );
-// };
-
 "use client";
 
 import { useEffect, useState } from "react";

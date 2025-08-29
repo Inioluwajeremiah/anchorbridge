@@ -2,7 +2,6 @@
 
 import PageHeader, { ILink } from "@/components/PageHeader";
 import CategoryCard from "@/components/category/CategoryCard";
-import RelatedPostCard from "@/components/related_posts/RelatePostCard";
 import { IResourcesCard } from "@/components/resources/ResourcesCard";
 import { resourcesData } from "@/data/resourcesData";
 import { servicesData } from "@/data/servicesData";
