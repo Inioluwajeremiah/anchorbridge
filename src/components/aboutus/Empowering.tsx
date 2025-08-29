@@ -26,8 +26,10 @@ const Empowering = () => {
   return (
     <section className="w-[94%] lg:container mx-auto flex flex-col lg:flex-row items-start lg:items-center gap-10 bg-[url(/empowering_bg.png)] bg-no-repeat bg-center  py-20">
       <div className="w-full lg:w-1/2">
-        <h1 className="text-3xl font-semibold underline">Empowering</h1>
-        <h1 className="mt-4 text-5xl font-semibold">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold underline">
+          Empowering
+        </h1>
+        <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold">
           Growth Through RevOps Excellence
         </h1>
         <div className="flex flex-row items-center gap-4 mt-4">
@@ -39,12 +41,12 @@ const Empowering = () => {
             src={usaIcon}
           />
 
-          <p className="text-xl font-semibold">
+          <p className="text-base md:text-lg lg:text-xl font-semibold">
             Since 2025, <br />
             Operating in Fort Lauderdale.
           </p>
         </div>
-        <p className="text-text-color-dark text-base mt-4">
+        <p className="text-text-color-dark text-sm md:text-base mt-4">
           Anchor Bridge Consulting is an innovative technology services and
           staff augmentation firm based in Fort Lauderdale, FL with offices in
           Lagos, Nigeria. We deliver high-impact solutions built around three
@@ -72,13 +74,15 @@ const Empowering = () => {
                 height={50}
                 className="w-12 h-12 rounded-full"
               />
-              <p className="text-2xl font-semibold">{item.title}</p>
+              <p className="text-lg md:text-xl lg:text-2xl font-semibold">
+                {item.title}
+              </p>
             </div>
           ))}
         </div>
 
         {/* crm dervices button */}
-        <button className="bg-black text-xl hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 cursor-pointer duration-500 ">
+        <button className="bg-black text-base md:text-lg  lg:text-xl hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 cursor-pointer duration-500 ">
           Our Services
         </button>
       </div>
@@ -89,7 +93,7 @@ const Empowering = () => {
             alt="Empowering Image"
             className="w-full  h-[500px] lg:h-auto object-cover object-center rounded-lg"
           />
-          <p className="w-full lg:w-[120%] z-30 bg-black rounded-lg p-4 mt-4 text-white text-2xl font-semibold ">
+          <p className="w-full lg:w-[120%] z-30 bg-black rounded-lg p-4 mt-4 text-white text-lg md:text-xl lg:text-2xl font-semibold ">
             Solving Complex Problems With Purpose-Built Tools <br />
             <span className=" capitalize text-text-color-light font-medium leading-6 mt-4">
               / Godfrey Malan
