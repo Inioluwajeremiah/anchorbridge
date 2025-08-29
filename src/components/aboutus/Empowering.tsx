@@ -24,8 +24,8 @@ const Empowering = () => {
   const { width, height } = useWindowDimensions();
   const [showIframe, setShowIframe] = useState(false);
   return (
-    <section className="w-full flex flex-row items-center gap-10 bg-[url(/empowering_bg.png)] bg-no-repeat bg-center  py-20">
-      <div className="w-1/2">
+    <section className="w-[94%] lg:container mx-auto flex flex-col lg:flex-row items-start lg:items-center gap-10 bg-[url(/empowering_bg.png)] bg-no-repeat bg-center  py-20">
+      <div className="w-full lg:w-1/2">
         <h1 className="text-3xl font-semibold underline">Empowering</h1>
         <h1 className="mt-4 text-5xl font-semibold">
           Growth Through RevOps Excellence
@@ -82,14 +82,14 @@ const Empowering = () => {
           Our Services
         </button>
       </div>
-      <div className="flex flex-row items-center gap-10">
-        <div className="w-1/2 z-20 ">
+      <div className="w-full lg:w-1/2 flex flex-col lg:flex-row items-center gap-10">
+        <div className="w-full lg:w-1/2 z-20 ">
           <img
             src={"/empowering_img1.jpg"}
             alt="Empowering Image"
-            className="w-full h-auto object-cover rounded-lg"
+            className="w-full  h-[500px] lg:h-auto object-cover object-center rounded-lg"
           />
-          <p className=" w-[120%] z-30 bg-black rounded-lg p-4 mt-4 text-white text-2xl font-semibold ">
+          <p className="w-full lg:w-[120%] z-30 bg-black rounded-lg p-4 mt-4 text-white text-2xl font-semibold ">
             Solving Complex Problems With Purpose-Built Tools <br />
             <span className=" capitalize text-text-color-light font-medium leading-6 mt-4">
               / Godfrey Malan
@@ -97,14 +97,14 @@ const Empowering = () => {
           </p>
         </div>
 
-        <div className="w-1/2 h-full ">
-          <div className="relative w-[80%] h-1/2">
+        <div className="w-full lg:w-1/2 h-full  ">
+          <div className="relative w-full lg:w-[80%] h-1/2 rounded-lg lg:rounded-none">
             <img
               src={"/empowering_img2.png"}
               alt="Empowering Image 2"
               //   width={500}
               //   height={500}
-              className="w-full h-full object-cover rounded-lg mt-20 mb-10"
+              className="w-full h-[500px] lg:h-full lg:object-cover object-center rounded-lg mt-10 lg:mt-20 mb-10"
             />
             <button
               onClick={() => {

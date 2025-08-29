@@ -32,15 +32,15 @@ const ourBusinessData = [
 
 const OurBusiness = () => {
   return (
-    <section className="py-20 bg-[#f0f3f9]">
-      <h1 className="text-3xl text-center underline text-primary-color-two">
+    <section className="py-10 md:py-14 lg:py-20 bg-[#f0f3f9]">
+      <h1 className="text-xl md:text-2xl lg:text-3xl text-center underline text-primary-color-two">
         Our Business
       </h1>
-      <h1 className="text-5xl text-center font-bold text-primary-color-two my-5">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-primary-color-two my-5">
         Stand Out From The Rest
       </h1>
 
-      <div className="lg:container  mx-auto grid grid-cols-3 gap-10 mt-10">
+      <div className="lg:container  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
         {ourBusinessData.map((business, index) => (
           <OurBusinessCard
             key={index}

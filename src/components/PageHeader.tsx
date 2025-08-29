@@ -17,9 +17,9 @@ const PageHeader: React.FC<IPageHeader> = ({ title, links, mediaDetails }) => {
     <div>
       <Header fromHome={false} />
 
-      <div className=" w-full h-[60vh] bg-black">
-        <div className="lg:container mx-auto  h-full">
-          <div className=" flex flex-col justify-between items-start h-full ">
+      <div className=" w-full bg-black py-28 relative">
+        <div className="lg:container mx-auto  ">
+          <div className=" flex flex-col justify-between items-start ">
             <div className=" flex-1 w-full flex flex-col justify-center items-center">
               <h1 className="text-white max-w-[60%] text-3xl md:text-4xl lg:text-5xl font-bold text-center">
                 {title}
@@ -66,8 +66,8 @@ const PageHeader: React.FC<IPageHeader> = ({ title, links, mediaDetails }) => {
             </div>
 
             {mediaDetails && (
-              <h3 className="uppercase text-white text-base font-semibold pb-6">
-                {links[links.length - 1].title}
+              <h3 className="uppercase text-white text-base font-semibold absolute bottom-6">
+                {links[links.length - 1].title} here
               </h3>
             )}
           </div>

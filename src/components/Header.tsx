@@ -186,7 +186,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
                 {/* crm button */}
 
                 {location !== "/" && (
-                  <button className="bg-black hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 text-sm font-bold cursor-pointer duration-1000">
+                  <button className="w-full bg-black hover:bg-white border border-black rounded-tl-lg rounded-br-lg text-white hover:rounded-tr-lg hover:rounded-bl-lg hover:rounded-tl-none hover:rounded-br-none  hover:text-black p-4 text-sm font-bold cursor-pointer duration-1000">
                     CRM Services
                   </button>
                 )}

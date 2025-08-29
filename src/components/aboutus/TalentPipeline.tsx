@@ -65,7 +65,7 @@ const TalentPipeline = () => {
       style={{ backgroundImage: 'url("/our_business_bg.png")' }}
       className=" bg-cover py-20 w-full bg-no-repeat relative"
     >
-      <div className="container mx-auto relative">
+      <div className="lg:container mx-auto relative">
         {/* <img
           alt={currentData.title + " image"}
           src={currentData.backgroundImage}
@@ -77,14 +77,14 @@ const TalentPipeline = () => {
           alt={currentData.title + " image"}
           src={currentData.backgroundImage}
           width={width}
-          height={height * 0.72}
-          className="rounded-lg w-full h-[72vh]"
+          height={550}
+          className="rounded-3xl w-[100%] h-[550px]  object-center "
         />
 
-        <div className="absolute w-full h-full top-0 z-30 bg-black/30">
-          <div className="flex flex-row items-start h-full  ">
+        <div className="absolute w-full h-full top-0 z-30 bg-black/30 rounded-3xl">
+          <div className="flex flex-col md:flex-row items-start h-full  ">
             {/* nav */}
-            <div className=" ml-20  -mt-10  w-[24%] rounded-lg bg-white">
+            <div className="absolute -top-full w-[94%] mx-auto md:ml-10  lg:ml-20  md:-mt-10 md:w-[40%] lg:w-[24%] rounded-lg bg-white">
               <ul className="  flex flex-col justify-start items-center px-4 pt-4  ">
                 {talentPipelineData.map((data, index) => (
                   <li
@@ -111,11 +111,11 @@ const TalentPipeline = () => {
               </a>
             </div>
             {/* main */}
-            <div className="w-[80%] h-full p-10 flex flex-col justify-end items-start  ">
-              <h1 className="text-5xl font-bold text-white">
+            <div className="w-full lg:w-[80%] h-full p-10 flex flex-col  lg:justify-end justify-center items-center lg:items-start  ">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                 {currentData.title || "Talent Pipeline"}
               </h1>
-              <p className="text-lg text-white mt-5 mb-10">
+              <p className="w-full mt-4  text-lg text-white mb-10">
                 {currentData.description ||
                   "Select a tab to view details about our talent pipeline."}
               </p>

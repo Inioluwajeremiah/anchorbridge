@@ -34,10 +34,10 @@ const OurBusinessCard: React.FC<IOurBusinessCard> = ({
             <FaThumbsUp size={30} color="#fff" />
           </div>
         </div>
-        <h2 className="text-2xl font-bold text-primary-color-two text-center mt-4">
+        <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-primary-color-two text-center mt-4">
           {title}
         </h2>
-        <p className="text-text-color-dark text-lg text-center mt-4 mb-4">
+        <p className="text-text-color-dark text-sm md:text-base lg:text-lg text-center mt-4 mb-4">
           {description}
         </p>
 
@@ -45,7 +45,7 @@ const OurBusinessCard: React.FC<IOurBusinessCard> = ({
           values.map((value, idx) => (
             <li
               key={idx}
-              className="text-lg self-start text-text-color-dark mb-1"
+              className="text-sm md:text-base lg:text-lg self-start text-text-color-dark mb-1"
             >
               {value}
             </li>
