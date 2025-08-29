@@ -16,8 +16,8 @@ const Modal: React.FC<ModalProps> = ({
 
   console.log(showModal);
 
-  const handleCloseModal = (e: any) => {
-    const target = e.target;
+  const handleCloseModal = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
     if (target.id === "modalWrapper") {
       // alert("parent modal clicked");
       setShowModal(false);

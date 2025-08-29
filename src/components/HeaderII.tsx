@@ -27,8 +27,8 @@ const HeaderII = ({}) => {
 
   const navHeight = height + 200;
 
-  const handleToggleMenu = (e: any) => {
-    const target = e.target;
+  const handleToggleMenu = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
     if (target.id !== "navMenu") {
       setToggleMenu(false);
     }
@@ -195,7 +195,7 @@ const HeaderII = ({}) => {
 
       {/* {toggleModal && ( */}
       <Modal
-        children={<ContactModal toggleModal={toggleModal} />}
+        children={<ContactModal />}
         toggleModal={toggleModal}
         handleToggleModal={handleToggleModal}
       />

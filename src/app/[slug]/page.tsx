@@ -47,7 +47,7 @@ const tagLinks = [
 
 // const
 
-const page = () => {
+const Page = () => {
   const searchParams = useSearchParams();
   const currentResourceId = searchParams.get("id");
   const links = searchParams.get("links");
@@ -57,7 +57,7 @@ const page = () => {
   const description = searchParams.get("description");
 
   const parsedLink = JSON.parse(links || "");
-  const headerLinks: ILink[] = parsedLink.map((link: any) => ({
+  const headerLinks: ILink[] = parsedLink.map((link: ILink) => ({
     title: link.title,
     url: link.url,
   }));
@@ -253,4 +253,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -12,7 +12,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
-const page = () => {
+const Page = () => {
   const searchParams = useSearchParams();
   const title = searchParams.get("title");
   const links = searchParams.get("links");
@@ -230,4 +230,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -31,7 +31,7 @@ const SubServiceCard: React.FC<ISubServiceCard> = ({ title, description }) => {
     </div>
   );
 };
-const page = () => {
+const ServiceDetailsPage = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   // const links = searchParams.get("links");
@@ -291,4 +291,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ServiceDetailsPage;

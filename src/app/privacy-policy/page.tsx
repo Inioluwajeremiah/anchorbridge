@@ -158,7 +158,7 @@ const privacyData = [
 const agreementStatement =
   "I agree to receive communications by text message regarding [Type of messaging] from Anchor Bridge Consulting. You may opt-out by replying STOP or ask for more information by replying HELP. Message frequency varies. Message and data rates may apply. You may review our Privacy Policy to learn how your data is used.";
 
-const page = () => {
+const PrivacyPolicyPage = () => {
   return (
     <div>
       <PageHeader
@@ -216,18 +216,23 @@ const page = () => {
                   <h2 className="mt-4 text-base lg:text-lg text-text-color-dark font-semibold  ">
                     {subsection?.subtitle}
                   </h2>
-                  {subsection.items.map((subsectionItem, index) => (
-                    <li className="mt-2 text-text-color-dark text-base lg:text-lg">
-                      {subsectionItem}
-                    </li>
-                  ))}
+                  {subsection.items.map(
+                    (subsectionItem, subsectionItemIndex) => (
+                      <li
+                        key={subsectionItemIndex}
+                        className="mt-2 text-text-color-dark text-base lg:text-lg"
+                      >
+                        {subsectionItem}
+                      </li>
+                    )
+                  )}
                 </div>
               ))}
 
             {/* if item has list of items  */}
             {item?.items &&
               item?.items.length > 0 &&
-              item.items.map((subsectionItem, subsectionItemIndex) => {
+              item.items.map((subsectionItem, subsectionItemKey) => {
                 // for SMS Terms & Conditions and Contact us
                 // condtionally check contact to display font in italics and remove list style
                 // i moved contact us out of here
@@ -237,6 +242,7 @@ const page = () => {
                 if (title && content) {
                   return (
                     <li
+                      key={subsectionItemKey}
                       className={`${
                         index === privacyData.length - 1 && "list-none italic"
                       } mt-2 text-text-color-dark text-base lg:text-lg`}
@@ -256,6 +262,7 @@ const page = () => {
                 } else {
                   return (
                     <li
+                      key={subsectionItemKey}
                       className={`${
                         index === privacyData.length - 1 && "italic list-none"
                       } mt-2 text-text-color-dark text-base lg:text-lg`}
@@ -302,4 +309,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PrivacyPolicyPage;
