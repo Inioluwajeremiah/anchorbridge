@@ -194,12 +194,9 @@ const HeaderII = ({}) => {
       </header>
 
       {/* {toggleModal && ( */}
-      <Modal
-        children={<ContactModal />}
-        toggleModal={toggleModal}
-        handleToggleModal={handleToggleModal}
-      />
-      {/* )} */}
+      <Modal toggleModal={toggleModal} handleToggleModal={handleToggleModal}>
+        <ContactModal />
+      </Modal>
     </>
   );
 };

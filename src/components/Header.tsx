@@ -27,8 +27,8 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
 
   const navHeight = height + 200; //-top-40 + other margins
 
-  const handleToggleMenu = (e: any) => {
-    const target = e.target;
+  const handleToggleMenu = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
     if (target.id !== "navMenu") {
       setToggleMenu(false);
     }
@@ -223,11 +223,9 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
         />
       )} */}
 
-      <Modal
-        children={<ContactModal />}
-        toggleModal={toggleModal}
-        handleToggleModal={handleToggleModal}
-      />
+      <Modal toggleModal={toggleModal} handleToggleModal={handleToggleModal}>
+        <ContactModal />
+      </Modal>
     </>
   );
 };

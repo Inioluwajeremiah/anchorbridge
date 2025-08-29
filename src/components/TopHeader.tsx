@@ -8,7 +8,7 @@ import {
   BiLogoLinkedin,
   BiPhoneCall,
 } from "react-icons/bi";
-import { BsArrowRight, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 const TopHeader = ({ fromHome }: { fromHome: boolean }) => {
   const { iconSize } = useWindowDimensions();
   return (

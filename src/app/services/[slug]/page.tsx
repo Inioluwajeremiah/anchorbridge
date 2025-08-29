@@ -1,6 +1,6 @@
 "use client";
 
-import PageHeader, { ILink } from "@/components/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { servicesData } from "@/data/servicesData";
 import Image from "next/image";
 import Link from "next/link";

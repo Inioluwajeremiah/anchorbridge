@@ -19,7 +19,7 @@ const Page = () => {
   //   const category = searchParams.get("category");
 
   const parsedLink = JSON.parse(links || "");
-  const headerLinks: ILink[] = parsedLink.map((link: any) => ({
+  const headerLinks: ILink[] = parsedLink.map((link: ILink) => ({
     title: link.title,
     url: link.url,
   }));
@@ -74,7 +74,7 @@ const Page = () => {
     );
     setFilteredData(filteredData);
     setCurrentPage(1);
-  }, [parsedLink[parsedLink.length - 1].title]);
+  }, [parsedLink, parsedLink[parsedLink.length - 1].title]);
 
   useEffect(() => {
     if (filteredData.length > 0) {
@@ -100,7 +100,7 @@ const Page = () => {
         <div className="w-[70%] border-r border-r-border-color-dark  pr-20 py-20">
           <div className=" flex flex-row justify-start items-center flex-wrap mt-10 gap-5">
             {currentData.length > 0 &&
-              currentData.map((item, _) => (
+              currentData.map((item) => (
                 <CategoryCard
                   id={item.id}
                   category={item.category}
