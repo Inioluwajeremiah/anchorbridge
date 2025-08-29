@@ -64,9 +64,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
   return (
     <>
       <header
-        className={`${
-          fromHome ? "lg:top-20 top-0" : "top-0"
-        } w-full h-36 z-50"`}
+        className={`${fromHome ? "lg:top-6 top-0" : "top-0"} w-full h-36 z-50"`}
         style={{
           // top: fromHome ? 20 : 0,
           position: fromHome ? "absolute" : "relative",
@@ -77,7 +75,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
         {/* main header */}
         <div className={`${!fromHome && "w-full bg-white"}`}>
           <div
-            className={`bg-white w-[94%] lg:container lg:w-full mx-auto h-20 flex flex-row items-center justify-between rounded-b-lg lg:px-10`}
+            className={`bg-white w-full px-[6%] lg:container lg:w-full lg:mx-auto h-20 flex flex-row items-center justify-between lg:rounded-b-lg lg:px-10`}
           >
             <div className="w-[20%]">
               {/* logo */}
@@ -226,7 +224,7 @@ const Header = ({ fromHome }: { fromHome: boolean }) => {
       )} */}
 
       <Modal
-        children={<ContactModal toggleModal={toggleModal} />}
+        children={<ContactModal />}
         toggleModal={toggleModal}
         handleToggleModal={handleToggleModal}
       />

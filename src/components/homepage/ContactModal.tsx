@@ -32,7 +32,7 @@ const imageUrls = [
   },
 ];
 
-const ContactModal = ({ toggleModal }: { toggleModal: boolean }) => {
+const ContactModal = () => {
   return (
     <div
       className={` w-full flex flex-col lg:flex-row justify-start items-start  overflow-y-scroll bg-gray-500/20 rounded-2xl `}

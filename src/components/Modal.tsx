@@ -12,7 +12,9 @@ const Modal: React.FC<ModalProps> = ({
   toggleModal,
   handleToggleModal,
 }) => {
-  const [_, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(true);
+
+  console.log(showModal);
 
   const handleCloseModal = (e: any) => {
     const target = e.target;

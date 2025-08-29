@@ -1,18 +1,5 @@
-import ExploreSolutions from "@/components/homepage/ExploreSolutions";
-import ExtensiveExperience from "@/components/homepage/ExtensiveExperience";
-import FutureProof from "@/components/homepage/FutureProof";
-import HeroSection from "@/components/homepage/HeroSection";
-import MediaAndIntelligence from "@/components/homepage/MediaAndIntelligence";
-import "../components/homepage/homepage.css";
+import HompePage from "@/components/homepage/HompePage";
 
 export default function Home() {
-  return (
-    <div>
-      <HeroSection />
-      <FutureProof />
-      <ExploreSolutions />
-      <ExtensiveExperience />
-      <MediaAndIntelligence />
-    </div>
-  );
+  return <HompePage />;
 }

@@ -29,19 +29,40 @@
 
 @keyframes scroll-reveal-bottom-top {
   0% {
-    transform: translateY(100%); /* starts lower */
+    transform: translateY(100%);
     opacity: 0;
   }
   100% {
-    transform: translateY(0); /* moves up to natural position */
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 .scroll-reveal-bottom-top {
-  animation: scroll-reveal-bottom-top 1s linear both;
-  /* animation-timeline: view();
-  animation-range: entry 0% cover 40%; */
+  animation: scroll-reveal-bottom-top 1s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% contain 40%;
+}
+
+@keyframes scroll-reveal-bottom-top {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scroll-reveal-bottom-top {
+  opacity: 0; /* hidden by default */
+  transform: translateY(100%);
+  transition: none;
+}
+
+.scroll-reveal-bottom-top.revealed {
+  animation: scroll-reveal-bottom-top 1s ease-out forwards;
 }
 
 /* Keyframes */

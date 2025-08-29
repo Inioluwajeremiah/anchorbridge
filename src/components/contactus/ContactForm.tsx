@@ -79,9 +79,9 @@ const ContactForm = () => {
       <p className="uppercase text-xs md:text-sm leading-4 mt-4 mb-8 font-medium">
         I agree to receive SMS communications from Anchor Bridge Consulting.
         Review our{" "}
-        <a href="/privacy-policy" className="text-blue-700">
+        <Link href="/privacy-policy" className="text-blue-700">
           Privacy Policy
-        </a>
+        </Link>
         for details.
       </p>
 
