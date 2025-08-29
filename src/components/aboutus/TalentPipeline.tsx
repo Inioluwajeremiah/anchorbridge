@@ -59,7 +59,7 @@ const TalentPipeline = () => {
     talentPipelineData[0]
   );
 
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
     <section
       style={{ backgroundImage: 'url("/our_business_bg.png")' }}
