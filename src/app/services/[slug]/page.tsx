@@ -38,13 +38,7 @@ const SubServiceCard: React.FC<ISubServiceCard> = ({ title, description }) => {
   );
 };
 
-const ServiceDetailsPage = async ({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) => {
-  const { slug } = await params;
-
+const ServiceDetailsPage = ({}) => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   // const links = searchParams.get("links");

@@ -12,7 +12,6 @@ import Link from "next/link";
 import RelatedPosts from "@/components/related_posts/RelatedPosts";
 import { servicesData } from "@/data/servicesData";
 import { tagCloudLinks } from "@/data/tagCloudLinks";
-import { resourcesData } from "@/data/resourcesData";
 
 const shareLinks = [
   {
