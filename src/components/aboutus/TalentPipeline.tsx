@@ -84,7 +84,7 @@ const TalentPipeline = () => {
         <div className="absolute w-full h-full top-0 z-30 bg-black/30 rounded-3xl">
           <div className="flex flex-col md:flex-row items-start h-full  ">
             {/* nav */}
-            <div className="absolute -top-full w-[94%] mx-auto md:ml-10  lg:ml-20  md:-mt-10 md:w-[40%] lg:w-[24%] rounded-lg bg-white">
+            <div className="absolute left-[3%] right-[3%] md:left-0 md:right-0 mx-auto md:relative  lg:top-0 -top-full w-[94%] md:ml-10  lg:ml-20  md:-mt-10 md:w-[40%] lg:w-[24%] rounded-lg bg-white">
               <ul className="  flex flex-col justify-start items-center px-4 pt-4  ">
                 {talentPipelineData.map((data, index) => (
                   <li
