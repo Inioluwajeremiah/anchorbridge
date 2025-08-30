@@ -12,11 +12,11 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
-export async function generateStaticParams() {
-  return resourcesData.map((resource) => ({
-    slug: resource.id,
-  }));
-}
+// export async function generateStaticParams() {
+//   return resourcesData.map((resource) => ({
+//     slug: resource.id,
+//   }));
+// }
 
 const Page = () => {
   const searchParams = useSearchParams();
