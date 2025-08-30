@@ -11,6 +11,12 @@ import ServiceIcon from "../../../../public/images/serviceicon.png";
 import { IL1, IQa } from "@/components/services/ServicesCard";
 import { PiPlay } from "react-icons/pi";
 
+export async function generateStaticParams() {
+  return servicesData.map((service) => ({
+    slug: service.id,
+  }));
+}
+
 interface ISubServiceCard {
   title: string;
   description: string;
@@ -31,7 +37,14 @@ const SubServiceCard: React.FC<ISubServiceCard> = ({ title, description }) => {
     </div>
   );
 };
-const ServiceDetailsPage = () => {
+
+const ServiceDetailsPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const { slug } = await params;
+
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   // const links = searchParams.get("links");
