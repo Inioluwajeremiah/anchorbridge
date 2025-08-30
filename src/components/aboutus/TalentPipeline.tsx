@@ -78,18 +78,18 @@ const TalentPipeline = () => {
           src={currentData.backgroundImage}
           width={width}
           height={550}
-          className="rounded-3xl w-[100%] h-[550px]  object-center "
+          className="rounded-3xl w-[100%] md:h-[550px]  object-center hidden md:block "
         />
 
-        <div className="absolute w-full h-full top-0 z-30 bg-black/30 rounded-3xl">
+        <div className="md:absolute w-full md:h-full md:top-0 md:z-30 md:bg-black/30 rounded-3xl">
           <div className="flex flex-col md:flex-row items-start h-full  ">
             {/* nav */}
-            <div className="absolute left-[3%] right-[3%] md:left-0 md:right-0 mx-auto md:relative  lg:top-0 -top-full w-[94%] md:ml-10  lg:ml-20  md:-mt-10 md:w-[40%] lg:w-[24%] rounded-lg bg-white">
+            <div className=" left-[3%] mb-10 md:mb-0 right-[3%] md:left-0 md:right-0 mx-auto md:relative  lg:top-0 w-[94%] md:ml-10  lg:ml-20  md:-mt-10 md:w-[40%] lg:w-[24%] rounded-lg bg-white">
               <ul className="  flex flex-col justify-start items-center px-4 pt-4  ">
                 {talentPipelineData.map((data, index) => (
                   <li
                     key={index}
-                    className={`w-full mx-4 cursor-pointer font-semibold text-xl py-6 border-b-2 border-b-border-color-dark  ${
+                    className={`w-full mx-4 cursor-pointer font-semibold text-xl py-4 md:py-6 border-b-2 border-b-border-color-dark  ${
                       currentData.tab === data.tab
                         ? "text-primary-color-two"
                         : ""
@@ -111,14 +111,24 @@ const TalentPipeline = () => {
               </a>
             </div>
             {/* main */}
-            <div className="w-full lg:w-[80%] h-full p-10 flex flex-col  lg:justify-end justify-center items-center lg:items-start  ">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                {currentData.title || "Talent Pipeline"}
-              </h1>
-              <p className="w-full mt-4  text-lg text-white mb-10">
-                {currentData.description ||
-                  "Select a tab to view details about our talent pipeline."}
-              </p>
+
+            <div className="relative md:h-full md:w-[60%] lg:w-[76%] ">
+              <Image
+                alt={currentData.title + " image"}
+                src={currentData.backgroundImage}
+                width={width}
+                height={550}
+                className="rounded-3xl w-[100%] h-fit  object-center md:hidden "
+              />
+              <div className="absolute md:relative top-0  bg-black/30 md:bg-transparent rounded-3xl  md:mt-0   w-full lg:w-[100%] h-full p-10 flex flex-col justify-end items-start ">
+                <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white">
+                  {currentData.title || "Talent Pipeline"}
+                </h1>
+                <p className="w-full mt-4 text-lg md:text-lg text-white mb-10">
+                  {currentData.description ||
+                    "Select a tab to view details about our talent pipeline."}
+                </p>
+              </div>
             </div>
           </div>
         </div>
