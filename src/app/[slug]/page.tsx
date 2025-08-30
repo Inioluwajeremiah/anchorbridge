@@ -46,11 +46,11 @@ const tagLinks = [
   { title: "Staff Augmentation", link: "/tag/staff-augmentation/" },
 ];
 
-export async function generateStaticParams() {
-  return resourcesData.map((resource) => ({
-    slug: resource.id,
-  }));
-}
+// export async function generateStaticParams() {
+//   return resourcesData.map((resource) => ({
+//     slug: resource.id,
+//   }));
+// }
 
 const Page = () => {
   const searchParams = useSearchParams();
